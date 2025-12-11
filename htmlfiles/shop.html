@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header class="site-header container" role="banner">
+    <div class ="logo">AROMA</div>
+    <nav aria-label="meny">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       </ul>
+    </nav>
+</header>
+<main class ="container" role="main"></main>
+<section class="layout" aria-label="Shopping area">
+  <section class="catalog" aria-labelledby="catalog-title">
+        <header style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <h2 id="catalog-title">Katalogu i Produkteve</h2>
+          <div style="color:#cfc6b8;font-size:.9rem">Zgjidh & shto në karrocë</div>
+        </header>
+        <div class="controls">
+          <label for="category">Kategori:</label>
+          <select id="category" aria-controls="products">
+            <option value="all">Të gjitha</option>
+            <option value="women">Women</option>
+            <option value="men">Men</option>
+            <option value="unisex">Unisex</option>
+          </select>
+           <label for="search" style="margin-left:6px">Kerko:</label>
+          <input id="search" type="search" placeholder="Kerko parfum..." aria-label="Kerko">
+
+          <button id="clearFilters" style="margin-left:auto;padding:8px;border-radius:8px;background:#222;color:#fff;border:1px solid #333">Clear</button>
+        </div>
+
+        <div id="products" class="products-grid" aria-live="polite">
+          
+        </div>
+      </section>
+      
+</body>
+</html>
