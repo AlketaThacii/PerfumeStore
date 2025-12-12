@@ -41,6 +41,56 @@
           
         </div>
       </section>
+
+      <aside class="cart" aria-labelledby="cart-title">
+        <h3 id="cart-title">Karroca</h3>
+
+        <div class="cart-list" id="cartList">
+          <i style="color:#cfc6b8">Karroca është bosh — shto një produkt.</i>
+        </div>
+
+        <div class="totals" id="totalsArea" hidden>
+          <div class="row"><span>Ndërshuma</span><span id="subtotal">€0.00</span></div>
+          <div class="row"><span>Transport</span><span id="shipping">€5.00</span></div>
+          <div class="row" style="font-weight:700"><span>Totali</span><span id="grandTotal">$0.00</span></div>
+        </div>
+
+        <form id="checkoutForm" class="checkout-form" novalidate>
+          <label for="cname">Emri</label>
+          <input id="cname" name="name" required minlength="2" placeholder="Emri dhe mbiemri">
+
+          <label for="cemail">Email</label>
+          <input id="cemail" name="email" type="email" required placeholder="email@ty.com">
+
+          <label for="address">Adresa</label>
+          <textarea id="address" name="address" rows="2" required placeholder="Adresa e dorezimit"></textarea>
+
+          <label for="pay">Menyra e Pageses</label>
+          <select id="pay" name="payment" required>
+            <option value="">Zgjedh...</option>
+            <option value="card">Kartë (simuluar)</option>
+            <option value="cod">Cash on delivery</option>
+          </select>
+
+            <div style="display:flex;gap:8px;align-items:center;">
+            <input id="agree" type="checkbox" required>
+            <label for="agree" style="margin:0">Pranoj termat dhe kushtet</label>
+          </div>
+
+          <button id="payBtn" class="pay-btn" type="submit" disabled>Paguaj & Porosis</button>
+          <p id="formMsg" style="font-size:.9rem;color:#cfc6b8;margin-top:8px"></p>
+        </form>
+      </aside>
+    </section>
+
+    <div id="successModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;">
+      <div style="background:#0b0b0b;padding:20px;border-radius:12px;border:1px solid #222;max-width:420px;text-align:center;color:#fff">
+        <h3 style="color:#d4af37">Porosia u pranua!</h3>
+        <p id="orderSummary" style="color:#cfc6b8"></p>
+        <button id="closeModal" style="margin-top:12px;padding:8px 14px;border-radius:8px;background:#d4af37;border:none;cursor:pointer">Mbyll</button>
+      </div>
+    </div>
+  </main>
       
 </body>
 </html>
