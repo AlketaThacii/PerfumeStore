@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../cssfiles/homepage.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <title>PerfumeStore</title>
 </head>
+
 <body>
     <div class="pjesakryesore">
         <header>
             <h2 class="logo">Aroma</h2>
             <nav class="navigation">
                 <a href="homepage.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="shop.html">Shop</a>
 
+
+                <a href="ourstore.html">Our store</a>
                 <div class="dropdown__item">
                     <div class="nav__link">
-                        Shop <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        Register <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                     </div>
                     <ul class="dropdown__menu">
-                        <li><a href="shop.html" class="dropdown__link">All</a></li>
-                        <li><a href="male.html" class="dropdown__link">Male</a></li>
-                        <li><a href="female.html" class="dropdown__link">Female</a></li>
+                        <li><a href="login.html" class="dropdown__link">Log In</a></li>
+                        <li><a href="signup.html" class="dropdown__link">Sign Up</a></li>
                     </ul>
                 </div>
-                <a href="sales.html">Sales</a>
-                <a href="ourstore.html">Our Store</a>
-                <a href="visitus.html">Visit Us</a>
-                <a href="login.html"><button class="btnLogin-popup">Login</button></a>
+                <div class="container">
+                    <form action="" class="search-form">
+                        <input type="text" placeholder="Type to search" class="search-input" />
+                        <div class="search-button">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <i class="fa-solid fa-xmark search-close"></i>
+                        </div>
+                    </form>
+                </div>
+
             </nav>
         </header>
     </div>
+    <script src="../javascriptfiles/homepage.js"></script>
 </body>
+
 </html>
