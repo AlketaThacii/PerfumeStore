@@ -1,0 +1,265 @@
+ const products = [
+      // Women 
+      { id: 'w1', name: 'Velour Femme', category: 'women', price: 79.99, img:'' },
+      { id: 'w2', name: 'Elegance Rose', category: 'women', price: 69.99, img: '' },
+      { id: 'w3', name: 'Jasmine Silk', category: 'women', price: 89.99, img: '' },
+      { id: 'w4', name: 'Moonlight', category: 'women', price: 99.99, img: '' },
+      { id: 'w5', name: 'Amber Glow', category: 'women', price: 109.99, img: '' },
+      { id: 'w6', name: 'Peony Whisper', category: 'women', price: 59.99, img: '' },
+
+      // Men 
+      { id: 'm1', name: 'Oud Noir', category: 'men', price: 120.00, img: '' },
+      { id: 'm2', name: 'Cedar Blaze', category: 'men', price: 95.00, img: '' },
+      { id: 'm3', name: 'Midnight Leather', category: 'men', price: 110.00, img: '' },
+      { id: 'm4', name: 'Spyre', category: 'men', price: 85.00, img: '' },
+      { id: 'm5', name: 'Tuscan Sun', category: 'men', price: 99.99, img: '' },
+      { id: 'm6', name: 'Ironwood', category: 'men', price: 75.00, img: '' },
+
+      // Unisex 
+      { id: 'u1', name: 'Citrus Cloud', category: 'unisex', price: 69.00, img: '' },
+      { id: 'u2', name: 'Amber Rain', category: 'unisex', price: 88.00, img: '' },
+      { id: 'u3', name: 'Vanilla Drift', category: 'unisex', price: 78.50, img: '' },
+      { id: 'u4', name: 'Noir Harmony', category: 'unisex', price: 99.00, img: '' },
+      { id: 'u5', name: 'Sage & Salt', category: 'unisex', price: 82.00, img: '' },
+      { id: 'u6', name: 'Rainwood', category: 'unisex', price: 92.00, img: '' },
+    ];
+
+   
+    const productsNode = document.getElementById('products');
+    function renderProducts(list){
+      productsNode.innerHTML = '';
+      
+      list.map(p => {
+        const div = document.createElement('div');
+        div.className = 'product';
+        div.innerHTML = `
+          <img src="${p.img}" alt="${p.name}">
+          <h4>${p.name}</h4>
+          <p class="desc">Category: ${p.category}</p>
+          <div class="price">$${p.price.toFixed(2)}</div>
+          <button class="add-btn" data-id="${p.id}">Shto në karrocë</button>
+        `;
+        productsNode.appendChild(div);
+      });
+    }
+
+    
+    const categorySelect = document.getElementById('category');
+    const searchInput = document.getElementById('search');
+
+    function getFiltered(){
+      const cat = categorySelect.value;
+      const q = searchInput.value.trim().toLowerCase();
+      return products.filter(p => (cat === 'all' || p.category === cat) && (p.name.toLowerCase().includes(q) || p.category.includes(q)));
+    }
+
+    
+    renderProducts(products);
+    
+    categorySelect.addEventListener('change', ()=> renderProducts(getFiltered()));
+    searchInput.addEventListener('input', ()=> renderProducts(getFiltered()));
+    document.getElementById('clearFilters').addEventListener('click', ()=>{
+      categorySelect.value = 'all'; searchInput.value = '';
+      renderProducts(products);
+    });
+
+    
+    let cart = []; 
+
+    function saveCartToStorage(){ localStorage.setItem('aroma_cart', JSON.stringify(cart)); }
+    function loadCartFromStorage(){ const raw = localStorage.getItem('aroma_cart'); cart = raw ? JSON.parse(raw) : []; }
+
+    function findProductById(id){ return products.find(p => p.id === id); }
+
+    function addToCart(id){
+      const found = cart.find(it => it.id === id);
+      if(found){ found.qty += 1; }
+      else{ cart.push({id, qty:1}); }
+      saveCartToStorage();
+      renderCart();
+      // efekt me jQuery
+      $('#cartList').fadeOut(120).fadeIn(350);
+    }
+
+  
+    function updateQty(id, qty){
+      cart = cart.map(it => it.id === id ? {...it, qty: Number(qty)} : it).filter(it => it.qty > 0);
+      saveCartToStorage(); renderCart();
+    }
+
+  
+    function removeFromCart(id){
+      cart = cart.filter(it => it.id !== id);
+      saveCartToStorage(); renderCart();
+      $('#cartList').slideUp(100).slideDown(250);
+    }
+
+    
+    function totals(){
+      const items = cart.map(it => {
+        const p = findProductById(it.id);
+        return { ...p, qty: it.qty, line: p.price * it.qty };
+      });
+      const subtotal = items.reduce((s, i) => s + i.line, 0);
+      const shipping = items.length ? 5.00 : 0;
+      const grand = subtotal + shipping;
+      return { items, subtotal, shipping, grand };
+    }
+
+    
+    function renderCart(){
+      const listNode = document.getElementById('cartList');
+      const totalsArea = document.getElementById('totalsArea');
+      listNode.innerHTML = '';
+      if(cart.length === 0){
+        listNode.innerHTML = '<i style="color:#cfc6b8">Karroca është bosh — shto një produkt.</i>';
+        totalsArea.hidden = true;
+        document.getElementById('payBtn').disabled = true;
+        return;
+      }
+
+      const {items, subtotal, shipping, grand} = totals();
+      items.forEach(it => {
+        const node = document.createElement('div');
+        node.className = 'cart-item';
+        node.innerHTML = `
+          <img src="${it.img}" alt="${it.name}">
+          <div class="meta">
+            <b>${it.name}</b>
+            <div style="font-size:.85rem;color:#cfc6b8">$${it.price.toFixed(2)} x ${it.qty}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+            <div class="qty">
+              <button class="dec" data-id="${it.id}">-</button>
+              <input class="qtyInput" data-id="${it.id}" value="${it.qty}" type="number" min="1">
+              <button class="inc" data-id="${it.id}">+</button>
+            </div>
+            <button class="remove" data-id="${it.id}" style="background:#2a2a2a;border:1px solid #333;color:#cfc6b8;padding:6px;border-radius:6px;cursor:pointer">Hiq</button>
+          </div>
+        `;
+        listNode.appendChild(node);
+      });
+
+      
+      document.getElementById('subtotal').innerText = `$${subtotal.toFixed(2)}`;
+      document.getElementById('shipping').innerText = `$${shipping.toFixed(2)}`;
+      document.getElementById('grandTotal').innerText = `$${grand.toFixed(2)}`;
+      totalsArea.hidden = false;
+
+      
+      document.getElementById('payBtn').disabled = false;
+
+      
+      document.querySelectorAll('.inc').forEach(b => b.onclick = e => {
+        const id = e.target.dataset.id; const it = cart.find(x=>x.id===id); it.qty++; saveCartToStorage(); renderCart();
+      });
+      document.querySelectorAll('.dec').forEach(b => b.onclick = e => {
+        const id = e.target.dataset.id; const it = cart.find(x=>x.id===id); it.qty = Math.max(1, it.qty - 1); saveCartToStorage(); renderCart();
+      });
+      document.querySelectorAll('.remove').forEach(b => b.onclick = e => removeFromCart(e.target.dataset.id));
+      document.querySelectorAll('.qtyInput').forEach(inp => inp.onchange = e => {
+        const id = e.target.dataset.id; const val = Number(e.target.value) || 1; updateQty(id, val);
+      });
+    }
+
+    
+    productsNode.addEventListener('click', (e)=>{
+      if(e.target.matches('.add-btn')){
+        const id = e.target.dataset.id;
+        addToCart(id);
+      }
+    });
+
+    
+    loadCartFromStorage();
+    renderCart();
+
+    
+    const checkoutForm = document.getElementById('checkoutForm');
+    const payBtn = document.getElementById('payBtn');
+    const formMsg = document.getElementById('formMsg');
+
+    
+    function checkFormReady(){
+      const validHtml = checkoutForm.checkValidity();
+      const cartOk = cart.length > 0;
+      payBtn.disabled = !(validHtml && cartOk);
+    }
+
+    
+    checkoutForm.addEventListener('input', checkFormReady);
+    window.addEventListener('storage', () => { loadCartFromStorage(); renderCart(); checkFormReady(); });
+
+    checkoutForm.addEventListener('submit', function(evt){
+      evt.preventDefault();
+      
+      const email = document.getElementById('cemail').value.trim();
+      if(!/^\S+@\S+\.\S+$/.test(email)){
+        formMsg.innerText = 'Email jo-valid. Shkruaj një email të vlefshëm.';
+        return;
+      }
+      if(cart.length === 0){
+        formMsg.innerText = 'Karroca është bosh.';
+        return;
+      }
+
+      
+      const orderItems = cart.map(ci => {
+        const p = findProductById(ci.id);
+        return { id: p.id, name: p.name, unit: p.price, qty: ci.qty, line: (p.price * ci.qty) };
+      });
+
+
+      const bigLines = orderItems.filter(it => it.line > 90);
+
+     
+      const subtotal = orderItems.reduce((s,i) => s + i.line, 0);
+      const shipping = orderItems.length ? 5.00 : 0;
+      const grand = subtotal + shipping;
+
+      
+      formMsg.style.color = '#cfc6b8';
+      formMsg.innerText = 'Po përpunojmë porosinë...';
+      payBtn.disabled = true;
+
+      setTimeout(() => {
+      
+        const orderId = 'ORD' + Math.floor(Math.random()*90000+10000);
+
+        $('#successModal').fadeIn(180);
+        document.getElementById('orderSummary').innerText = `
+          Faleminderit, ${document.getElementById('cname').value}!
+          Porosia ${orderId} u krijua. Totali: $${grand.toFixed(2)}.
+          Artikuj të mëdhenj (linja>90$): ${bigLines.map(b=>b.name).join(', ') || 'Nuk ka'}.
+        `;
+
+        
+        cart = []; saveCartToStorage(); renderCart();
+        checkoutForm.reset();
+        formMsg.innerText = 'Porosia u krye me sukses!';
+        payBtn.disabled = false;
+      }, 1100);
+    });
+
+   
+    document.getElementById('closeModal').addEventListener('click', ()=> $('#successModal').fadeOut(180));
+
+    
+    checkFormReady();
+
+    
+    $('#search').on('input', function(){
+      $('#products').fadeTo(120, 0.6).fadeTo(120,1);
+    });
+
+    
+    categorySelect.addEventListener('change', ()=> renderProducts(getFiltered()));
+    searchInput.addEventListener('input', ()=> renderProducts(getFiltered()));
+
+    
+    renderProducts(products);
+
+    
+    document.getElementById('search').addEventListener('keydown', (e) => {
+      if(e.key === 'Enter'){ e.preventDefault(); renderProducts(getFiltered()); }
+    });
