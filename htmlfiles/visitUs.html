@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="sq">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vizito - Maison de Parfum</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="../cssfiles/visitUs.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Maison de Parfum</h1>
+      <p class="lead">Një përvojë luksi.</p>
+      <div class="divider"></div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Vizitoni Showroom-in Tonë</h2>
+
+        <p>
+          <strong>Adresa:</strong> Tirana East Gate (TEG)<br>
+          Autostrada Tiranë–Elbasan
+        </p>
+
+        <div class="details">
+          <div class="detail">
+            <strong>Orari</strong>
+            Çdo ditë 10:00 – 20:00
+          </div>
+          <div class="detail">
+            <strong>Telefon</strong>
+            +355 69 000 0000
+          </div>
+        </div>
+
+        <div class="cta">
+          <button class="btn primary" disabled>Rezervo Tani</button>
+
+          <a class="btn secondary" href="https://www.google.com/maps/dir/?api=1&destination=Tirana+East+Gate+TEG"
+            target="_blank" rel="noopener">
+            Navigo 🚗
+          </a>
+        </div>
+
+        <div id="map" class="map"></div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+]
+  <script src="../javascriptfiles/visitUs.js"></script>
+
+</body>
+
+</html>
