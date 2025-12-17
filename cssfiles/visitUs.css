@@ -146,3 +146,51 @@ p {
     font-size: 30px;
   }
 }
+/* Booking modal*/
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(180deg, #111, #070707);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 18px;
+  padding: 32px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--gold);
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.full { width: 100%; }
+
+.close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 26px;
+  cursor: pointer;
+  color: var(--gold);
+}
