@@ -5,7 +5,13 @@
     border: none;
     outline: none;
 }
-
+body {
+    background-image: url(../images/backgroundphoto.jpg);
+    background-size: cover;       
+   background-position: top center; 
+    background-repeat: no-repeat; 
+    
+}
 .pjesakryesore{
     display: flex;
     justify-content: center;
