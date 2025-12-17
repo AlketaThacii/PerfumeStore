@@ -1,27 +1,27 @@
  const products = [
       // Women 
-      { id: 'w1', name: 'Velour Femme', category: 'women', price: 79.99, img:'' },
-      { id: 'w2', name: 'Elegance Rose', category: 'women', price: 69.99, img: '' },
-      { id: 'w3', name: 'Jasmine Silk', category: 'women', price: 89.99, img: '' },
-      { id: 'w4', name: 'Moonlight', category: 'women', price: 99.99, img: '' },
-      { id: 'w5', name: 'Amber Glow', category: 'women', price: 109.99, img: '' },
-      { id: 'w6', name: 'Peony Whisper', category: 'women', price: 59.99, img: '' },
+      { id: 'w1', name: 'Velour Femme', category: 'women', price: 79.99, img:'../images/image1.jpg' },
+      { id: 'w2', name: 'Elegance Rose', category: 'women', price: 69.99, img: '../images/image2.jpg' },
+      { id: 'w3', name: 'Jasmine Silk', category: 'women', price: 89.99, img: '../images/image3.jpg' },
+      { id: 'w4', name: 'Moonlight', category: 'women', price: 99.99, img: '../images/image4.jpg' },
+      { id: 'w5', name: 'Amber Glow', category: 'women', price: 109.99, img: '../images/image5.jpg' },
+      { id: 'w6', name: 'Peony Whisper', category: 'women', price: 59.99, img: '../images/image6.jpg' },
 
       // Men 
-      { id: 'm1', name: 'Oud Noir', category: 'men', price: 120.00, img: '' },
-      { id: 'm2', name: 'Cedar Blaze', category: 'men', price: 95.00, img: '' },
-      { id: 'm3', name: 'Midnight Leather', category: 'men', price: 110.00, img: '' },
-      { id: 'm4', name: 'Spyre', category: 'men', price: 85.00, img: '' },
-      { id: 'm5', name: 'Tuscan Sun', category: 'men', price: 99.99, img: '' },
-      { id: 'm6', name: 'Ironwood', category: 'men', price: 75.00, img: '' },
+      { id: 'm1', name: 'Oud Noir', category: 'men', price: 120.00, img: '../images/image7.jpg' },
+      { id: 'm2', name: 'Cedar Blaze', category: 'men', price: 95.00, img: '../images/image8.jpg' },
+      { id: 'm3', name: 'Midnight Leather', category: 'men', price: 110.00, img: '../images/image9.jpg' },
+      { id: 'm4', name: 'Spyre', category: 'men', price: 85.00, img: '../images/image10.jpg' },
+      { id: 'm5', name: 'Tuscan Sun', category: 'men', price: 99.99, img: '../images/image11.jpg' },
+      { id: 'm6', name: 'Ironwood', category: 'men', price: 75.00, img: '../images/image12.jpg' },
 
       // Unisex 
-      { id: 'u1', name: 'Citrus Cloud', category: 'unisex', price: 69.00, img: '' },
-      { id: 'u2', name: 'Amber Rain', category: 'unisex', price: 88.00, img: '' },
-      { id: 'u3', name: 'Vanilla Drift', category: 'unisex', price: 78.50, img: '' },
-      { id: 'u4', name: 'Noir Harmony', category: 'unisex', price: 99.00, img: '' },
-      { id: 'u5', name: 'Sage & Salt', category: 'unisex', price: 82.00, img: '' },
-      { id: 'u6', name: 'Rainwood', category: 'unisex', price: 92.00, img: '' },
+      { id: 'u1', name: 'Citrus Cloud', category: 'unisex', price: 69.00, img: './images/images14.jpg' },
+      { id: 'u2', name: 'Amber Rain', category: 'unisex', price: 88.00, img: './images/images15.jpg' },
+      { id: 'u3', name: 'Vanilla Drift', category: 'unisex', price: 78.50, img: './images/images16.jpg' },
+      { id: 'u4', name: 'Noir Harmony', category: 'unisex', price: 99.00, img: './images/images17.jpg' },
+      { id: 'u5', name: 'Sage & Salt', category: 'unisex', price: 82.00, img: './images/images18.jpg' },
+      { id: 'u6', name: 'Rainwood', category: 'unisex', price: 92.00, img: './images/images19.jpg' },
     ];
 
    
