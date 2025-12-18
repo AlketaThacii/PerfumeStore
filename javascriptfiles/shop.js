@@ -21,15 +21,15 @@
       { id: 'm8', name: 'Baccarat Rouge 540 Extrait | Kurkdjian', category: 'men', price: 75.00, img: '../images/image24.jpg' },
 
 
-      // Unisex 
-      { id: 'u1', name: 'Citrus Cloud', category: 'unisex', price: 69.00, img: './images/images14.jpg' },
-      { id: 'u2', name: 'Amber Rain', category: 'unisex', price: 88.00, img: './images/images15.jpg' },
-      { id: 'u3', name: 'Vanilla Drift', category: 'unisex', price: 78.50, img: './images/images16.jpg' },
-      { id: 'u4', name: 'Noir Harmony', category: 'unisex', price: 99.00, img: './images/images17.jpg' },
-      { id: 'u5', name: 'Sage & Salt', category: 'unisex', price: 82.00, img: './images/images18.jpg' },
-      { id: 'u6', name: 'Rainwood', category: 'unisex', price: 92.00, img: './images/images19.jpg' },
-      { id: 'u7', name: 'Chanel 1957 | Chanel', category: 'unisex', price: 92.00, img: './images/images25.jpg' },
-      { id: 'u8', name: 'Red Tobacco | Mancera', category: 'unisex', price: 92.00, img: './images/images26.jpg' },
+      // Unisex 2
+      { id: 'u1', name: 'Citrus Cloud', category: 'unisex', price: 69.00, img: '../images/image14.jpg' },
+      { id: 'u2', name: 'Amber Rain', category: 'unisex', price: 88.00, img: '../images/image15.jpg' },
+      { id: 'u3', name: 'Vanilla Drift', category: 'unisex', price: 78.50, img: '../images/image16.jpg' },
+      { id: 'u4', name: 'Noir Harmony', category: 'unisex', price: 99.00, img: '../images/image17.jpg' },
+      { id: 'u5', name: 'Sage & Salt', category: 'unisex', price: 82.00, img: '../images/image1.jpg' },
+      { id: 'u6', name: 'Rainwood', category: 'unisex', price: 92.00, img: '../images/image19.jpg' },
+      { id: 'u7', name: 'Chanel 1957 | Chanel', category: 'unisex', price: 92.00, img: '../images/image25.jpg' },
+      { id: 'u8', name: 'Red Tobacco | Mancera', category: 'unisex', price: 92.00, img: '../images/image26.jpg' },
 
     ];
 
