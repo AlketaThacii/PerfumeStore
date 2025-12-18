@@ -6,6 +6,9 @@
       { id: 'w4', name: 'Moonlight', category: 'women', price: 99.99, img: '../images/image4.jpg' },
       { id: 'w5', name: 'Amber Glow', category: 'women', price: 109.99, img: '../images/image5.jpg' },
       { id: 'w6', name: 'Peony Whisper', category: 'women', price: 59.99, img: '../images/image6.jpg' },
+      { id: 'w7', name: 'Ari | Ariana Grande', category: 'women', price: 59.99, img: '../images/image21.jpg' },
+      { id: 'w8', name: 'Baccarat Rouge 540 | Kurkdjian', category: 'women', price: 59.99, img: '../images/image22.jpg' },
+
 
       // Men 
       { id: 'm1', name: 'Oud Noir', category: 'men', price: 120.00, img: '../images/image7.jpg' },
@@ -14,6 +17,9 @@
       { id: 'm4', name: 'Spyre', category: 'men', price: 85.00, img: '../images/image10.jpg' },
       { id: 'm5', name: 'Tuscan Sun', category: 'men', price: 99.99, img: '../images/image11.jpg' },
       { id: 'm6', name: 'Ironwood', category: 'men', price: 75.00, img: '../images/image12.jpg' },
+      { id: 'm7', name: 'Valentino', category: 'men', price: 75.00, img: '../images/image23.jpg' },
+      { id: 'm8', name: 'Baccarat Rouge 540 Extrait | Kurkdjian', category: 'men', price: 75.00, img: '../images/image24.jpg' },
+
 
       // Unisex 
       { id: 'u1', name: 'Citrus Cloud', category: 'unisex', price: 69.00, img: './images/images14.jpg' },
@@ -22,6 +28,9 @@
       { id: 'u4', name: 'Noir Harmony', category: 'unisex', price: 99.00, img: './images/images17.jpg' },
       { id: 'u5', name: 'Sage & Salt', category: 'unisex', price: 82.00, img: './images/images18.jpg' },
       { id: 'u6', name: 'Rainwood', category: 'unisex', price: 92.00, img: './images/images19.jpg' },
+      { id: 'u7', name: 'Chanel 1957 | Chanel', category: 'unisex', price: 92.00, img: './images/images25.jpg' },
+      { id: 'u8', name: 'Red Tobacco | Mancera', category: 'unisex', price: 92.00, img: './images/images26.jpg' },
+
     ];
 
    
