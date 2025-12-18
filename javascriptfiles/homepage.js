@@ -15,5 +15,4 @@ const toggleSearch = () => {
     }
   });
 };
-
 toggleSearch();
