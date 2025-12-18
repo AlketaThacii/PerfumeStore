@@ -46,7 +46,7 @@
           <h4>${p.name}</h4>
           <p class="desc">Category: ${p.category}</p>
           <div class="price">$${p.price.toFixed(2)}</div>
-          <button class="add-btn" data-id="${p.id}">Shto në karrocë</button>
+          <button class="add-btn" data-id="${p.id}">Add to cart</button>
         `;
         productsNode.appendChild(div);
       });
@@ -121,7 +121,7 @@
       const totalsArea = document.getElementById('totalsArea');
       listNode.innerHTML = '';
       if(cart.length === 0){
-        listNode.innerHTML = '<i style="color:#cfc6b8">Karroca është bosh — shto një produkt.</i>';
+        listNode.innerHTML = '<i style="color:#cfc6b8">The cart is empty-add a product.</i>';
         totalsArea.hidden = true;
         document.getElementById('payBtn').disabled = true;
         return;
@@ -143,7 +143,7 @@
               <input class="qtyInput" data-id="${it.id}" value="${it.qty}" type="number" min="1">
               <button class="inc" data-id="${it.id}">+</button>
             </div>
-            <button class="remove" data-id="${it.id}" style="background:#2a2a2a;border:1px solid #333;color:#cfc6b8;padding:6px;border-radius:6px;cursor:pointer">Hiq</button>
+            <button class="remove" data-id="${it.id}" style="background:#2a2a2a;border:1px solid #333;color:#cfc6b8;padding:6px;border-radius:6px;cursor:pointer">Remove</button>
           </div>
         `;
         listNode.appendChild(node);
@@ -204,11 +204,11 @@
       
       const email = document.getElementById('cemail').value.trim();
       if(!/^\S+@\S+\.\S+$/.test(email)){
-        formMsg.innerText = 'Email jo-valid. Shkruaj një email të vlefshëm.';
+        formMsg.innerText = 'Email is not valid. Please enter a valid email address.';
         return;
       }
       if(cart.length === 0){
-        formMsg.innerText = 'Karroca është bosh.';
+        formMsg.innerText = 'The cart is empty.';
         return;
       }
 
@@ -228,7 +228,7 @@
 
       
       formMsg.style.color = '#cfc6b8';
-      formMsg.innerText = 'Po përpunojmë porosinë...';
+      formMsg.innerText = 'We are processing your order...';
       payBtn.disabled = true;
 
       setTimeout(() => {
@@ -237,15 +237,15 @@
 
         $('#successModal').fadeIn(180);
         document.getElementById('orderSummary').innerText = `
-          Faleminderit, ${document.getElementById('cname').value}!
-          Porosia ${orderId} u krijua. Totali: $${grand.toFixed(2)}.
-          Artikuj të mëdhenj (linja>90$): ${bigLines.map(b=>b.name).join(', ') || 'Nuk ka'}.
+          Thank you!, ${document.getElementById('cname').value}!
+          Order ${orderId} created. Total: €€{grand.toFixed(2)}.
+          Large items (line>90€): ${bigLines.map(b=>b.name).join(', ') || 'None'}.
         `;
 
         
         cart = []; saveCartToStorage(); renderCart();
         checkoutForm.reset();
-        formMsg.innerText = 'Porosia u krye me sukses!';
+        formMsg.innerText = 'Order placed successfully!';
         payBtn.disabled = false;
       }, 1100);
     });
