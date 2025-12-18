@@ -1,27 +1,36 @@
  const products = [
       // Women 
-      { id: 'w1', name: 'My Way | Armani', category: 'women', price: 79.99, img:'../images/image1.jpg' },
-      { id: 'w2', name: 'African Leather | Memo Paris', category: 'women', price: 69.99, img: '../images/image2.jpg' },
-      { id: 'w3', name: 'Angels Share Anniversary Edition | Kilian', category: 'women', price: 89.99, img: '../images/image3.jpg' },
-      { id: 'w4', name: 'Arabians Tonka | Montale', category: 'women', price: 99.99, img: '../images/image4.jpg' },
-      { id: 'w5', name: 'Jasmin Noir | Bvlgari', category: 'women', price: 109.99, img: '../images/image5.jpg' },
-      { id: 'w6', name: 'Good Girl | Carolina Herrera', category: 'women', price: 59.99, img: '../images/image6.jpg' },
+      { id: 'w1', name: 'Velour Femme', category: 'women', price: 79.99, img:'../images/image1.jpg' },
+      { id: 'w2', name: 'Elegance Rose', category: 'women', price: 69.99, img: '../images/image2.jpg' },
+      { id: 'w3', name: 'Jasmine Silk', category: 'women', price: 89.99, img: '../images/image3.jpg' },
+      { id: 'w4', name: 'Moonlight', category: 'women', price: 99.99, img: '../images/image4.jpg' },
+      { id: 'w5', name: 'Amber Glow', category: 'women', price: 109.99, img: '../images/image5.jpg' },
+      { id: 'w6', name: 'Peony Whisper', category: 'women', price: 59.99, img: '../images/image6.jpg' },
+      { id: 'w7', name: 'Ari | Ariana Grande', category: 'women', price: 59.99, img: '../images/image21.jpg' },
+      { id: 'w8', name: 'Baccarat Rouge 540 | Kurkdjian', category: 'women', price: 59.99, img: '../images/image22.jpg' },
+
 
       // Men 
-      { id: 'm1', name: 'Dolce Gabana', category: 'men', price: 120.00, img: '../images/image8.jpg' },
-      { id: 'm2', name: 'Ambassador Men | Gisada', category: 'men', price: 95.00, img: '../images/image9.jpg' },
-      { id: 'm3', name: 'Amouage', category: 'men', price: 110.00, img: '../images/image10.jpg' },
-      { id: 'm4', name: 'Sauvage Elixir | Dior', category: 'men', price: 85.00, img: '../images/image13.jpg' },
-      { id: 'm5', name: 'Code Man | Armani', category: 'men', price: 99.99, img: '../images/image11.jpg' },
-      { id: 'm6', name: 'Bleu | Chanel', category: 'men', price: 75.00, img: '../images/image12.jpg' },
+      { id: 'm1', name: 'Oud Noir', category: 'men', price: 120.00, img: '../images/image7.jpg' },
+      { id: 'm2', name: 'Cedar Blaze', category: 'men', price: 95.00, img: '../images/image8.jpg' },
+      { id: 'm3', name: 'Midnight Leather', category: 'men', price: 110.00, img: '../images/image9.jpg' },
+      { id: 'm4', name: 'Spyre', category: 'men', price: 85.00, img: '../images/image10.jpg' },
+      { id: 'm5', name: 'Tuscan Sun', category: 'men', price: 99.99, img: '../images/image11.jpg' },
+      { id: 'm6', name: 'Ironwood', category: 'men', price: 75.00, img: '../images/image12.jpg' },
+      { id: 'm7', name: 'Valentino', category: 'men', price: 75.00, img: '../images/image23.jpg' },
+      { id: 'm8', name: 'Baccarat Rouge 540 Extrait | Kurkdjian', category: 'men', price: 75.00, img: '../images/image24.jpg' },
+
 
       // Unisex 
-      { id: 'u1', name: 'YSL', category: 'unisex', price: 69.00, img: '../images/image14.jpg' },
-      { id: 'u2', name: 'Oud Satin Mood | Kurkdjian', category: 'unisex', price: 88.00, img: '../images/image15.jpg' },
-      { id: 'u3', name: 'Kirke | Tiziana Terenzi', category: 'unisex', price: 78.50, img: '../images/image16.jpg' },
-      { id: 'u4', name: 'Myrrhe Mystere | Tom Ford', category: 'unisex', price: 99.00, img: '../images/image17.jpg' },
-      { id: 'u5', name: 'Vodka on the Rocks | Kilian', category: 'unisex', price: 82.00, img: '../images/image18.jpg' },
-      { id: 'u6', name: 'More Than Words | Xerjoff', category: 'unisex', price: 92.00, img: '../images/image20.jpg' },
+      { id: 'u1', name: 'Citrus Cloud', category: 'unisex', price: 69.00, img: './images/images14.jpg' },
+      { id: 'u2', name: 'Amber Rain', category: 'unisex', price: 88.00, img: './images/images15.jpg' },
+      { id: 'u3', name: 'Vanilla Drift', category: 'unisex', price: 78.50, img: './images/images16.jpg' },
+      { id: 'u4', name: 'Noir Harmony', category: 'unisex', price: 99.00, img: './images/images17.jpg' },
+      { id: 'u5', name: 'Sage & Salt', category: 'unisex', price: 82.00, img: './images/images18.jpg' },
+      { id: 'u6', name: 'Rainwood', category: 'unisex', price: 92.00, img: './images/images19.jpg' },
+      { id: 'u7', name: 'Chanel 1957 | Chanel', category: 'unisex', price: 92.00, img: './images/images25.jpg' },
+      { id: 'u8', name: 'Red Tobacco | Mancera', category: 'unisex', price: 92.00, img: './images/images26.jpg' },
+
     ];
 
    
