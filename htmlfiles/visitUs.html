@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="sq">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vizito - Maison de Parfum</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="../cssfiles/visitUs.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Maison de Parfum</h1>
+      <p class="lead">Një përvojë luksi.</p>
+      <div class="divider"></div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Vizitoni Showroom-in Tonë</h2>
+
+        <p>
+          <strong>Adresa:</strong> Tirana East Gate (TEG)<br>
+          Autostrada Tiranë–Elbasan
+        </p>
+
+        <div class="details">
+          <div class="detail">
+            <strong>Orari</strong>
+            Çdo ditë 10:00 – 20:00
+          </div>
+          <div class="detail">
+            <strong>Telefon</strong>
+            +355 69 000 0000
+          </div>
+        </div>
+
+        <div class="cta">
+          <!--Booking modal-->
+          <button class="btn primary" onclick="openBooking()">Rezervo Tani</button>
+          <div id="bookingModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeBooking()">&times;</span>
+
+              <h2>Rezervo Takimin</h2>
+              <p class="modal-subtitle">Maison de Parfum — përvojë e personalizuar</p>
+
+              <form onsubmit="submitBooking(event)">
+                <label>Emri i plotë</label>
+                <input type="text" required placeholder="Emri dhe mbiemri">
+
+                <label>Numri i telefonit</label>
+                <input type="tel" required placeholder="+355 69 ...">
+
+                <label>Data</label>
+                <input type="date" required>
+
+                <label>Ora</label>
+                <input type="time" step="900" required>
+
+                <button type="submit" class="btn primary full">
+                  Konfirmo Rezervimin
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <a class="btn secondary" href="https://www.google.com/maps/dir/?api=1&destination=Tirana+East+Gate+TEG"
+            target="_blank" rel="noopener">
+            Navigo 🚗
+          </a>
+        </div>
+
+
+        <div id="map" class="map"></div>
+      </section>
+    </main>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  ]
+  <script src="../javascriptfiles/visitUs.js"></script>
+
+</body>
+
+</html>
