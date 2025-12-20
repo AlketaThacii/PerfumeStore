@@ -16,9 +16,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    padding-top: 120px;
     background-position: center;
-    
 }
 header{
     background-color: black;
@@ -247,17 +246,21 @@ header{
     font-size: 13px;
     color: #888;
 }
-
+.konsumatoret{
+    margin-top: 75px;
+}
 .pjesaa {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;;
+    min-height: auto;
+    padding: 90px 0;
 }
 .konsumatoret h1{
   text-align: center;
   margin-bottom: -130px;
   text-transform: uppercase;
+  color: white;
 } 
 .reviews {
     position: relative;
@@ -266,7 +269,7 @@ header{
     display: flex;
     align-items: center;
 }
-.swiper3 {
+.mySwiper {
     width: 950px;
 } 
 .container3 {
@@ -335,8 +338,7 @@ header{
     font-weight: 600;
 } 
 .pershkrimi .review {
-    font-size: 10px;
-    font-weight: 300;
+    font-size: 9px;
     text-align: center;
 }  
 .card3 .rating {
@@ -349,16 +351,39 @@ header{
     color: #daa520;
     margin: 0 2px;
 } 
-.swiper3-pagination-bullet {
-    height: 7px;
-    width: 26px;
-    background: #daa520;
-    border-radius: 25px;
-} 
-.swiper3-button-next,
-.swiper3-button-prev {
+
+.swiper-button-next::after {
+    content: "››";
+    font-size: 40px;
     color: #daa520;
+    font-weight: bold;
 }
+
+.swiper-button-prev::after {
+    content: "‹‹";
+    font-size: 40px;
+    color: #daa520;
+    font-weight: bold;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: transparent;
+}
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 6px;
+    border-radius: 10px;
+    background: #daa520;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #daa520;
+    opacity: 1;
+}
+
+
 
 
   
@@ -449,4 +474,3 @@ ul{
     color: #24262b;
     background-color: #ffffff;
 }
-
