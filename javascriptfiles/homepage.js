@@ -32,3 +32,10 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  $(document).ready(function () {
+
+    $(".card4").on("mouseenter", function () {
+      $(this).addClass("selected").siblings().removeClass("selected");
+    });
+  });

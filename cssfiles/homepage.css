@@ -250,18 +250,19 @@ header{
 
 .teksti h1{
   text-align: center;
-  margin-bottom: -130px;
   text-transform: uppercase;
+  margin-bottom: -70px;
+  color: white;
 }
 .pjesatrete {
     margin: 0;
-    padding: 0;
-    min-height: 100vh;
     font-family: "poppins", sans-serif;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: auto;
+    padding: 90px 0;
 }
 .container4 {
     padding: 40px;
@@ -269,31 +270,26 @@ header{
     align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
-
 }
-  
 .card4 {
     width: 305px;
     margin: 25px;
     padding: 40px 30px;
-    background-color: rgb(97, 96, 96);
+    background-color: rgb(59, 57, 57);
     position: relative;
     transition: all 0.25s ease-in-out;
 }
-  
 .card4 .card__icon {
     width: 80%;
     margin-left: 20px;
     margin-bottom: 20px;
-}
-  
+} 
 .card4 .card__icon i {
     height: 75px;
     width: 100%;
     color: gold;
     font-size: 50px;
 }
-  
 .card4 h6 {
     margin-bottom: 10px;
     color: #ffffff;
@@ -304,7 +300,7 @@ header{
 }
 .card4 p {
     list-style: none;
-    padding: 3px 0;
+    padding: 10px 0;
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
@@ -325,7 +321,6 @@ header{
 .card4.selected {
     background-color: #161619;
     box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
-    
 }
   
 
@@ -342,7 +337,7 @@ header{
 }
 .konsumatoret h1{
   text-align: center;
-  margin-bottom: -130px;
+  margin-bottom: -110px;
   text-transform: uppercase;
   color: white;
 } 
