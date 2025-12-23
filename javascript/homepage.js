@@ -33,9 +33,23 @@ var swiper = new Swiper(".mySwiper", {
     },
   });
 
+  
   $(document).ready(function () {
 
     $(".card4").on("mouseenter", function () {
       $(this).addClass("selected").siblings().removeClass("selected");
     });
   });
+
+
+
+  $(function () {
+    $('.brand-slider-only').hover(
+        function () {
+            $('.brand-slider-track').css('animation-play-state', 'paused');
+        },
+        function () {
+            $('.brand-slider-track').css('animation-play-state', 'running');
+        }
+    );
+});
