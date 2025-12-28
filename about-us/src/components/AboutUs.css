@@ -1,0 +1,40 @@
+.about {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #111 0%, #080708 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.about-container {
+  max-width: 800px;
+  padding: 60px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+
+.about-title {
+  font-size: 42px;
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.about-subtitle {
+  font-size: 18px;
+  color: #bdb6a6;
+  margin-bottom: 30px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e0e0e0;
+  margin-bottom: 18px;
+}
