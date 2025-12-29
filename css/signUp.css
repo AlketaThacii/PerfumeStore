@@ -78,6 +78,13 @@ margin-top: 120px;
     pointer-events: none;
     transition: .5s;
 }
+.input-box .icon {
+    position: absolute;
+    right: 5px;
+    color: gold;    
+    font-size: 1.2em;
+    line-height: 57px;
+}
 
 .input-box input:focus~label,
 .input-box input:valid~label{
