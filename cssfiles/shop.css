@@ -11,13 +11,13 @@
     .home-link {
     font-size: 24px;      
     font-weight: bold;    
-    color: rgb(2, 0, 128);        
+    color: rgb(193, 229, 32);        
     text-decoration: underline; 
     margin: 10px;         
 }
 
 .home-link:hover {
-    color: darkviolet;    
+    color: rgb(196, 189, 4);    
 }
     .container{
       max-width:1200px;
@@ -78,7 +78,7 @@
     .cart-item{display:flex;gap:10px;align-items:center;background:#0f0f0f;padding:8px;border-radius:8px;border:1px solid #222}
     .cart-item img{width:56px;height:76px;object-fit:cover;border-radius:6px}
     .cart-item .meta{flex:1}
-    .cart-item .meta b{display:block;color:#D4AF37}
+    .cart-item .meta b{display:block;color:#d7b136}
     .qty{display:flex;gap:6px;align-items:center}
     .qty button{background:#222;color:#fff;border:1px solid #333;padding:6px 8px;border-radius:6px;cursor:pointer}
     .qty input{width:44px;text-align:center;background:#0b0b0b;border:1px solid #222;padding:6px;border-radius:6px;color:#fff}
