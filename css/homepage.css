@@ -12,6 +12,7 @@ body {
     background-repeat: no-repeat; 
 }
 
+/*Pjesa e NavBar-it*/
 .pjesakryesore{
     display: flex;
     justify-content: center;
@@ -57,8 +58,6 @@ header{
     text-decoration: none;
     font-weight: 500;
 }
-
-
 .navigation a:after{
     content: '';
     position: absolute;
@@ -71,13 +70,10 @@ header{
     transform: scaleX(0);
     transition: transform .5s;
 }
-
 .navigation a:hover ::after{
     transform-origin:left ;
     transform: scaleX(1);
 }
-
-
 .dropdown__item{
     position: relative;   
     display: flex;
@@ -136,7 +132,6 @@ header{
   margin: 0 0.5rem;
   transition: width 0.5s;
 }
-
 .search-input {
   background-color: white;
   border: none;
@@ -147,7 +142,6 @@ header{
   font-size: 0.75rem;
   pointer-events: none;
 }
-
 .search-button {
   width: 2.4rem;
   height: 2.4rem;
@@ -159,7 +153,6 @@ header{
   cursor: pointer;
   transition: all 0.5s;
 }
-
 .search-icon,
 .search-close {
   position: absolute;
@@ -169,7 +162,6 @@ header{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .search-close {
   opacity: 0;
 }
@@ -177,15 +169,12 @@ header{
   max-width: 100%;
   width: 16rem;
 }
-
 .active-search .search-button {
   left: calc(100% - 1.6rem);
 }
-
 .active-search .search-input {
   pointer-events: initial;
 }
-
 .active-search .search-close {
   opacity: 1;
 }
@@ -194,6 +183,7 @@ header{
 }
 
 
+/*Pjesa e videos*/
 .hero-video-section {
     position: relative;
     height: 80vh;
@@ -267,7 +257,7 @@ header{
 }
 
 
-
+/*Pjesa kryesore(e shfaqjes se produkteve)*/
 .improvement {
     min-height: 60vh;
     display: flex;
@@ -309,7 +299,6 @@ header{
     font-size: 18px;
     margin-bottom: 15px;
 }
-
 .text-box p {
     font-size: 15px;
     line-height: 1.6;
@@ -318,6 +307,7 @@ header{
 }
 
 
+/*Pjesa "AboutUs" */
 .about-section {
     background: #000;
     padding: 80px 0;
@@ -389,6 +379,7 @@ header{
 }
 
 
+/*Pjesa "OurBrands" */
 .brand-slider-only h1{
   text-align: center;
   text-transform: uppercase;
@@ -444,8 +435,7 @@ header{
 }
 
 
-
-
+/*Pjesa What Makes Us Special" */
 .teksti h1{
   text-align: center;
   text-transform: uppercase;
@@ -523,7 +513,7 @@ header{
 }
   
 
-
+/*Pjesa "What our Costumers Say" */
 .konsumatoret{
     margin-top: 75px;
 }
@@ -636,14 +626,12 @@ header{
     color: #daa520;
     font-weight: bold;
 }
-
 .swiper-button-prev::after {
     content: "‹‹";
     font-size: 40px;
     color: #daa520;
     font-weight: bold;
 }
-
 .swiper-button-next,
 .swiper-button-prev {
     background: transparent;
@@ -655,13 +643,13 @@ header{
     background: #daa520;
     opacity: 0.5;
 }
-
 .swiper-pagination-bullet-active {
     background: #daa520;
     opacity: 1;
 }
 
 
+/*Pjesa e newsletter*/
 .alert-banner {
   position: fixed;
   top: -60px; 
@@ -741,9 +729,7 @@ header{
 }
 
 
-
-
-
+/*Pjesa e footerit*/
 .container1{
     max-width: 100%;
     margin: auto;
