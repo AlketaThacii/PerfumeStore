@@ -139,10 +139,14 @@ header{
   padding: 28px;
 }
 
-.header1 {
-  text-align: left;
-  margin-bottom: 32px;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
+
 
 h1 {
   color: var(--gold);
@@ -230,6 +234,7 @@ p {
 }
 
 .btn.primary {
+  font-family: 'Playfair Display', serif;
   background: linear-gradient(90deg, var(--gold), #b8860b);
   color: #0a0a0a;
 }
@@ -250,6 +255,11 @@ p {
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 400;
 }
 
 
@@ -280,6 +290,7 @@ p {
   background: linear-gradient(180deg, #111, #070707);
   border: 1px solid rgba(212,175,55,0.25);
   border-radius: 18px;
+  margin-bottom: 40px;
   padding: 32px;
   max-width: 420px;
   width: 100%;
