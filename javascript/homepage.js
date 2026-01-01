@@ -53,3 +53,39 @@ var swiper = new Swiper(".mySwiper", {
         }
     );
 });
+
+
+const form = document.getElementById('newsletter-form');
+const emailInput = document.getElementById('email');
+const alertBanner = document.getElementById('alert-banner');
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const email = emailInput.value.trim();
+
+    if(validateEmail(email)){
+        showAlert("Thank you! Email was successfully registered.", "green");
+        emailInput.value = '';
+    } else {
+        showAlert("The email is incorrect. Please try again.", "red");
+    }
+});
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+function showAlert(message, color){
+    alertBanner.textContent = message;
+    alertBanner.style.backgroundColor = color;
+    alertBanner.style.top = '20px'; 
+    alertBanner.style.opacity = '1';
+
+    setTimeout(() => {
+        alertBanner.style.opacity = '0';
+        alertBanner.style.top = '-60px';
+    }, 3000);
+}
+
