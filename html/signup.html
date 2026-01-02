@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -8,64 +9,134 @@
     <link rel="stylesheet" href="../css/signUp.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
+    <div class="pjesakryesore">
+        <header>
+            <h2 class="logo">Maison De Parfum</h2>
+            <nav class="navigation">
+                <a href="homepage.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="visitUs.html">Our store</a>
+                <div class="dropdown__item">
+                    <div class="nav__link">
+                        Register <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li><a href="login.html" class="dropdown__link">Log In</a></li>
+                        <li><a href="signup.html" class="dropdown__link">Sign Up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
     <div class="kryesore">
         <div class="wrapper active">
-        <span class="icon-close">
-            <ion-icon name="close-outline"></ion-icon>
-        </span>
+            <span class="icon-close">
+                <ion-icon name="close-outline"></ion-icon>
+            </span>
 
-        <div class="form-box register">
-            <h2>SignUp</h2>
+            <div class="form-box register">
+                <h2>SignUp</h2>
 
-            <form action="#">
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Name</label>
-                </div>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Name</label>
+                    </div>
 
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Surname</label>
-                </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Surname</label>
+                    </div>
 
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="call"></ion-icon></span>
-                    <input type="tel" required>
-                    <label>Phone number</label>
-                </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="call"></ion-icon></span>
+                        <input type="tel" required>
+                        <label>Phone number</label>
+                    </div>
 
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="location"></ion-icon></span>
-                    <input type="text" required>
-                    <label>Adress</label>
-                </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="location"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Adress</label>
+                    </div>
 
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
-                    <label>Email</label>
-                </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
 
-                <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
-                    <label>Password</label>
-                </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
 
-                <button type="submit" class="btn">SignUp</button>
-                 <a href="login.html" class="login-link">
-  Already have an account? Login
-</a>
-            </form>
+                    <button type="submit" class="btn">SignUp</button>
+                    <a href="login.html" class="login-link">
+                        Already have an account? Login
+                    </a>
+                </form>
+            </div>
+
         </div>
-
     </div>
-</div>
-</div>
-<script src="../javascript/register.js"></script>
+    <div class="fundi">
+        <footer class="footer">
+            <div class="container1">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Locations</h4>
+                        <ul>
+                            <li><a href="#">Tirane</a></li>
+                            <li><a href="#">Prishtine</a></li>
+                            <li><a href="#">Fushe Kosove</a></li>
+                            <li><a href="#">Prizren</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><a href="#">Email: parfum@gmail.com</a></li>
+                            <li><a href="#">Numri: +355 69 253 6666</a></li>
+                            <li><a href="#">Fax: +355 69 253 6666</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="../html/termsOfService.html">Terms of Service</a></li>
+                            <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li>
+                            <li><a href="../html/refundPolicy.html">Refund Policy</a></li>
+                            <li><a href="../html/shippingPolicy.html">Shipping Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/maisondeparfum_tirana/?hl=en"><i
+                                    class=" fab fa-instagram"></i> </a>
+                            <a href="https://www.facebook.com/mdplibriuniversitar/"><i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@maisondeparfumtirana"><i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>&copy; 2025, Maison De Parfum</h3>
+        </footer>
+    </div>
+    <script src="../javascript/register.js"></script>
 </body>
+
 </html>

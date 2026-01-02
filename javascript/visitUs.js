@@ -34,3 +34,18 @@ window.addEventListener('click', function (e) {
     closeBooking();
   }
 });
+
+//Funksionni per rregullim te scroll te headerit
+$(document).ready(function () {
+    var lastScrollTop = 0;
+    var navbar = $('header');
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            navbar.slideUp(200);
+        } else {
+            navbar.slideDown(200);
+        }
+        lastScrollTop = st;
+    });
+});
