@@ -269,3 +269,144 @@ ul{
 #backToTop:hover {
     background-color: #555;
 }
+
+
+/*Responsiviteti*/
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 100;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        background-color: black;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+
+    #menu-toggle:checked+.hamburger+.navigation {
+        display: flex;
+    }
+
+    .dropdown__menu {
+        position: static;
+        display: none;
+        flex-direction: column;
+        background: #111;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .dropdown__item:focus-within .dropdown__menu {
+        display: flex;
+    }
+
+    .footer h3 {
+        background-color: #000;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer h3 {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 100;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        background-color: black;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+
+    #menu-toggle:checked+.hamburger+.navigation {
+        display: flex;
+    }
+
+    .dropdown__menu {
+        position: static;
+        display: none;
+        flex-direction: column;
+        background: #111;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .dropdown__item:focus-within .dropdown__menu {
+        display: flex;
+    }
+
+    .container1 {
+        background-color: black;
+    }
+
+    .footer h3 {
+        background-color: #000;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer h3 {
+        padding-top: 50px;
+    }
+}
