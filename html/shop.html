@@ -6,26 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop</title>
   <link rel="stylesheet" href="../css/shop.css">
+  <!--ikonat e nav dhe footer -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- 
- 
+  <!--jquery per funksonalitetin e shopit-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
 </head>
 
 <body>
+  <!--Headeri me nav bar-->
   <header class="main-header">
     <div class="nav-container">
       <h2 class="logo">Maison De Parfum</h2>
-<input type="checkbox" id="menu-toggle" />
-<label for="menu-toggle" class="hamburger">&#9776;</label>
-
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+      <!--Navigacioni-->
       <nav class="navigation">
         <a href="homepage.html">Home</a>
         <a href="aboutUs.html">About Us</a>
         <a href="shop.html">Shop</a>
         <a href="visitUs.html">Our store</a>
-
+        <!--Dropdowni per login dhe register-->
         <div class="dropdown__item">
           <div class="nav__link">
             Register <i class="ri-arrow-down-s-line dropdown__arrow"></i>
@@ -39,17 +42,20 @@
     </div>
   </header>
 
-
+  <!--Main contenti i shopit-->
 
 
   <main class="container" role="main"></main>
+
+  <!-- Shop section -->
   <section class="layout" aria-label="Shopping area">
     <section class="catalog" aria-labelledby="catalog-title">
       <header style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
         <h2 id="catalog-title">Product Catalog</h2>
-        <div style="color:#cfc6b8;font-size:.9rem">Select & add to cart</div>
+        <div style="color:#ffffff;font-size:.9rem">Select & add to cart</div>
       </header>
       <div class="controls">
+        <!--filtrimi per katergori-->
         <label for="category">Category:</label>
         <select id="category" aria-controls="products">
           <option value="all">All</option>
@@ -59,7 +65,7 @@
         </select>
         <label for="search" style="margin-left:6px">Search :</label>
         <input id="search" type="search" placeholder="Search a perfume..." aria-label="Search">
-
+        <!--butoni per pastrimin e filtrave-->
         <button id="clearFilters"
           style="margin-left:auto;padding:8px;border-radius:8px;background:#222;color:#fff;border:1px solid #333">Clear</button>
       </div>
@@ -68,20 +74,21 @@
 
       </div>
     </section>
+    <!--seksioni i shop kartes-->
 
     <aside class="cart" aria-labelledby="cart-title">
       <h3 id="cart-title">Shopping Cart</h3>
-
+      <!--lista e produkteve te shtuara ne kart-->
       <div class="cart-list" id="cartList">
         <i style="color:#cfc6b8">Your cart is empty — add a product.</i>
       </div>
-
+      <!--totali i cmimit te produkteve ne karte-->
       <div class="totals" id="totalsArea" hidden>
         <div class="row"><span>Subtotal</span><span id="subtotal">€0.00</span></div>
         <div class="row"><span>Shipping</span><span id="shipping">€5.00</span></div>
         <div class="row" style="font-weight:700"><span>Total</span><span id="grandTotal">$0.00</span></div>
       </div>
-
+      <!--form per checkout -->
       <form id="checkoutForm" class="checkout-form" novalidate>
         <label for="cname">Name</label>
         <input id="cname" name="name" required minlength="2" placeholder="Name and surname">
@@ -91,7 +98,7 @@
 
         <label for="address">Address</label>
         <textarea id="address" name="address" rows="2" required placeholder="Delivery address"></textarea>
-
+        <!--metoda e pageses-->
         <label for="pay">Payment Method</label>
         <select id="pay" name="payment" required>
           <option value="">Choose...</option>
@@ -109,6 +116,7 @@
       </form>
     </aside>
   </section>
+  <!--Modeli kur konfirmohet porosia-->
 
   <div id="successModal"
     style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);align-items:center;justify-content:center;">
@@ -129,24 +137,27 @@
           <div class="footer-col">
             <h4>Locations</h4>
             <ul>
-              <li><a>Tirane</a></li>
-              <li><a>Prishtine</a></li>
-              <li><a>Fushe Kosove</a></li>
-              <li><a>Prizren</a></li>
+              <!--Lista e lokacioneve-->
+              <li><a href="#">Tirane</a></li>
+              <li><a href="#">Prishtine</a></li>
+              <li><a href="#">Fushe Kosove</a></li>
+              <li><a href="#">Prizren</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <h4>Contact Us</h4>
+
             <ul>
               <li><a>Email: parfum@gmail.com</a></li>
-              <li><a>Numri: +355 69 253 6666</a></li>
+              <li><a>Phone: +355 69 253 6666</a></li>
               <li><a>Fax: +355 69 253 6666</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>Legal</h4>
             <ul>
+              <!--lista e faqeve ligjore-->
               <li><a href="../html/termsOfService.html">Terms of Service</a></li>
               <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li>
               <li><a href="../html/refundPolicy.html">Refund Policy</a></li>
@@ -156,9 +167,11 @@
           <div class="footer-col">
             <h4>Follow Us</h4>
             <div class="social-links">
+              <!--ikonat e rrjeteve sociale-->
               <a href="https://www.instagram.com/maisondeparfum_tirana/?hl=en"><i class=" fab fa-instagram"></i> </a>
               <a href="https://www.facebook.com/mdplibriuniversitar/"><i class="fab fa-facebook-f"></i>
               </a>
+
               <a href="https://www.tiktok.com/@maisondeparfumtirana"><i class="fa-brands fa-tiktok"></i>
               </a>
             </div>

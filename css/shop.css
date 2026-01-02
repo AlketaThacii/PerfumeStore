@@ -5,7 +5,7 @@
    border: none;
    outline: none;
  }
-
+ /*Pjesa e headerit dhe nav barit*/
  
  body {
    background-image: url(../images/c0f0167a545b3e55eded2d51622b17fa.jpg);
@@ -13,6 +13,7 @@
    background-position: top center;
    background-repeat: no-repeat;
  }
+ /*Headeri me nav bar*/
 
  .main-header {
    display: flex;
@@ -21,6 +22,7 @@
    padding-top: 120px;
    background-position: center;
  }
+ /*Nav bari*/
 
  .nav-container {
    background-color: black;
@@ -63,7 +65,7 @@
    font-weight: 500;
    transition: transform 0.3s ease;
  }
-
+/*Nav bari me dropdown per login dhe register*/
  .navigation a {
    position: relative;
    font-size: 1.1em;
@@ -172,6 +174,7 @@
    align-items: start;
  }
 
+/*  Pjesa e katalogut dhe cartit*/
 
  .catalog {
    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
@@ -187,7 +190,7 @@
    margin-bottom: 14px;
    align-items: center
  }
-
+/* Pjesa e filtrave dhe searchit*/
  .controls label {
    font-size: .95rem;
    color: #cfc6b8
@@ -207,7 +210,7 @@
    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
    gap: 16px;
  }
-
+/* Pjesa e produkteve ne katalog*/
  .product {
    background: #0f0f0f;
    border: 1px solid #252525;
@@ -225,6 +228,7 @@
  }
 
  
+/* Pjesa e imazheve te produkteve ne katalog*/
 
  .product img {
    width: 110px;
@@ -252,13 +256,13 @@
    color: #D4AF37;
    margin-bottom: 8px
  }
-
+/* Pjesa e cmimit dhe butonit per te shtuar ne cart*/
  .price {
    font-weight: 700;
    color: #D4AF37;
    margin-bottom: 10px
  }
-
+/* Butoni per te shtuar ne cart*/
  .add-btn {
    background: #D4AF37;
    color: #000;
@@ -295,7 +299,7 @@
    gap: 10px;
    margin-bottom: 12px
  }
-
+/* Pjesa e itemeve ne cart*/
  .cart-item {
    display: flex;
    gap: 10px;
@@ -327,7 +331,7 @@
    gap: 6px;
    align-items: center
  }
-
+/* Pjesa e sasis se produkteve ne cart*/
  .qty button {
    background: #222;
    color: #fff;
@@ -336,7 +340,7 @@
    border-radius: 6px;
    cursor: pointer
  }
-
+/* Pjesa e inputit per sasin ne cart*/
  .qty input {
    width: 44px;
    text-align: center;
@@ -352,7 +356,7 @@
    padding-top: 12px;
    margin-top: 12px
  }
-
+/* Pjesa e totalit ne cart*/
  .totals .row {
    display: flex;
    justify-content: space-between;
@@ -365,11 +369,12 @@
    flex-direction: column;
    gap: 8px
  }
-
+/* Pjesa e formit per checkout*/
  .checkout-form label {
    font-size: .9rem;
    color: #cfc6b8
  }
+ /* Pjesa e inputeve te formit per checkout*/
 
  .checkout-form input,
  .checkout-form textarea,
@@ -380,11 +385,13 @@
    background: #0b0b0b;
    color: #fff;
  }
-
+/* Pjesa e fokusit ne inputet e formit per checkout*/
  .checkout-form input:focus,
  .checkout-form textarea:focus {
    outline: 2px solid rgba(212, 175, 55, 0.15)
  }
+
+ /* Pjesa e butonit per pagese ne cart*/
 
  .pay-btn {
    margin-top: 8px;
@@ -414,7 +421,7 @@
  .product h4:hover {
    color: #fff
  }
-
+/* Responsive dizajni*/
 
  @media (max-width:980px) {
    .layout {
@@ -476,7 +483,7 @@
    position: relative;
    padding-top: 50px;
  }
-
+/*Qeshtja e vijes nen titujt e footerit*/
  .footer-col h4::before {
    content: '';
    position: absolute;
@@ -506,7 +513,7 @@
    color: #ffffff;
    padding-left: 8px;
  }
-
+/*Qeshtja e ikonave te rrjeteve sociale ne footer*/
  .footer-col .social-links a {
    display: inline-block;
    height: 40px;
@@ -565,7 +572,7 @@
     top: 20px;
     z-index: 100;
   }
-
+/* Nav bar per mobile */
   .navigation {
     display: none; /* fsheh menu normale */
     flex-direction: column;
@@ -650,4 +657,14 @@ main.container {
 .footer {
   background-color: black; /* krejt i zi */
   margin-top: auto; /* e shtyn poshtë */
+}
+
+#catalog-title {
+  color: #ffffff;
+}
+.subtotal-price {
+  color: #ffffff;
+}
+.totals {
+  color: #ffffff;
 }
