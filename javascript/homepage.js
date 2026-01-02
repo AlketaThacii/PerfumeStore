@@ -1,30 +1,5 @@
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-
-  
-  $(document).ready(function () {
-
-    $(".card4").on("mouseenter", function () {
-      $(this).addClass("selected").siblings().removeClass("selected");
-    });
-  });
-
-
-
-  $(function () {
+//Pjesa "Our Brands"
+$(function () {
     $('.brand-slider-only').hover(
         function () {
             $('.brand-slider-track').css('animation-play-state', 'paused');
@@ -36,16 +11,45 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
+//Pjesa "What makes us Special"
+$(document).ready(function () {
+
+    $(".card4").on("mouseenter", function () {
+        $(this).addClass("selected").siblings().removeClass("selected");
+    });
+});
+
+
+//Pjesa per me bo swip ne pjesen "What our Clients Say"
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+
+//Pjesa e shfaqjes se alertit kur bejm subscribe
 const form = document.getElementById('newsletter-form');
 const emailInput = document.getElementById('email');
 const alertBanner = document.getElementById('alert-banner');
 
-form.addEventListener('submit', function(e){
+form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     const email = emailInput.value.trim();
 
-    if(validateEmail(email)){
+    if (validateEmail(email)) {
         showAlert("Thank you! Email was successfully registered.", "green");
         emailInput.value = '';
     } else {
@@ -58,10 +62,10 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-function showAlert(message, color){
+function showAlert(message, color) {
     alertBanner.textContent = message;
     alertBanner.style.backgroundColor = color;
-    alertBanner.style.top = '20px'; 
+    alertBanner.style.top = '20px';
     alertBanner.style.opacity = '1';
 
     setTimeout(() => {
@@ -70,6 +74,8 @@ function showAlert(message, color){
     }, 3000);
 }
 
+
+//Funksioni per shfaqjen e njoftimit per cookies
 $(document).ready(function () {
 
     setTimeout(function () {
@@ -77,7 +83,7 @@ $(document).ready(function () {
             $("#cookie-overlay, #cookie-modal").fadeIn();
             sessionStorage.setItem("cookieShown", "true");
         }
-    }, 3000); 
+    }, 3000);
 
     $("#cookie-accept").click(function () {
         $("#cookie-overlay, #cookie-modal").fadeOut();
@@ -89,28 +95,24 @@ $(document).ready(function () {
 
 });
 
-
+//Funksionni per rregullim te scroll te headerit
 $(document).ready(function () {
-    var lastScrollTop = 0; // Ruaj scroll-in e mëparshëm
-    var navbar = $('header'); // Zgjidh header-in
-
+    var lastScrollTop = 0;
+    var navbar = $('header');
     $(window).scroll(function () {
-        var st = $(this).scrollTop(); // Marr scroll-in aktual
-
+        var st = $(this).scrollTop();
         if (st > lastScrollTop) {
-            // Scroll poshtë
-            navbar.slideUp(200); // fsheh header-in
+            navbar.slideUp(200);
         } else {
-            // Scroll lart
-            navbar.slideDown(200); 
+            navbar.slideDown(200);
         }
-        lastScrollTop = st; 
+        lastScrollTop = st;
     });
 });
 
-
+//Funksioni per butonin "Back to Top"
 $(document).ready(function () {
-    $('body').append('<div id="backToTop">&#8679;</div>'); 
+    $('body').append('<div id="backToTop">&#8679;</div>');
 
     var backToTop = $('#backToTop');
 
@@ -122,7 +124,7 @@ $(document).ready(function () {
         }
     });
     backToTop.click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 500); 
+        $('html, body').animate({ scrollTop: 0 }, 500);
         return false;
     });
 });
