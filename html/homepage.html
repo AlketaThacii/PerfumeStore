@@ -8,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/homepage.css">
     <title>PerfumeStore</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,6 +15,7 @@
 </head>
 
 <body>
+    
     <div class="pjesakryesore">
         <header>
             <h2 class="logo">Maison De Parfum</h2>
@@ -23,8 +23,6 @@
                 <a href="homepage.html">Home</a>
                 <a href="aboutus.html">About Us</a>
                 <a href="shop.html">Shop</a>
-
-
                 <a href="visitUs.html">Our store</a>
                 <div class="dropdown__item">
                     <div class="nav__link">
@@ -35,19 +33,93 @@
                         <li><a href="signup.html" class="dropdown__link">Sign Up</a></li>
                     </ul>
                 </div>
-                <div class="container">
-                    <form action="" class="search-form">
-                        <input type="text" placeholder="Type to search" class="search-input" />
-                        <div class="search-button">
-                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                            <i class="fa-solid fa-xmark search-close"></i>
-                        </div>
-                    </form>
-                </div>
-
             </nav>
         </header>
     </div>
+    <div id="cookie-overlay"></div>
+
+    <div id="cookie-modal">
+        <h3>Cookies and Tracking Technologies</h3>
+        <p>
+            By using our website, you confirm agreement to the use of cookies and other
+            third-party tracking technologies to improve site functionality, analyze your
+            interactions with our site, and deliver personalized advertising.
+            For more information, see our
+            <a href="privacyPolicy.html">Privacy Policy</a> and <a href="termsOfService.html">Terms of Use</a>.
+        </p>
+
+        <button id="cookie-accept">OK</button>
+        <button id="cookie-preferences">PREFERENCES</button>
+    </div>
+
+    <section class="hero-video-section">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="../images/mixkit-pressing-down-on-a-bottle-of-perfume-20766-hd-ready (1).mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>The Art of Fragrance</h1>
+            <p class="hero-subtitle">Inspired by elegance. Created with passion.</p>
+            <p class="hero-desc">Each fragrance tells a story of character, depth, and modern luxury.</p>
+            <div class="hero-buttons">
+                <a href="shop.html" class="btn primary">Shop Now</a>
+                <a href="visitUs.html" class="btn primary">Discover</a>
+            </div>
+        </div>
+    </section>
+    <section class="about-section">
+        <div class="about-container">
+
+            <div class="about-text">
+                <h1>CREATED WITH<br>PURPOSE</h1>
+                <p>A refined luxury experience crafted with passion and elegance.Maison de Parfum is a contemporary fragrance house dedicated to
+                     refinement, authenticity, and the art of modern perfumery. Our brand was created with a clear vision: to transform scent into 
+                     a personal signature and elevate fragrance into an emotional experience.</p>
+
+                <p>Each creation is carefully composed using high-quality ingredients and meticulous craftsmanship.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn primary">Read More</a>
+                </div>
+            </div>
+
+            <div class="about-images">
+                <div class="img img-1"></div>
+                <div class="img img-2"></div>
+                <div class="img img-3"></div>
+            </div>
+
+        </div>
+    </section>
+    <section class="brand-slider-only">
+        <h1>Our Brands</h1>
+        <div class="brand-slider-wrapper">
+
+            <div class="brand-slider-track">
+
+                <div class="brand-slider-set">
+                    <img src="../images/chanel (2).jpg" alt="">
+                    <img src="../images/images (2).png" alt="">
+                    <img src="../images/images (1).png" alt="">
+                    <img src="../images/giorgio-armani-logo-brand-clothes-white-design-fashion-symbol-illustration-with-black-background-free-vector.jpg"
+                        alt="">
+                    <img src="../images/circa-april-2014-marbella-spain-260nw-193032692.jpg" alt="">
+                    <img src="../images/dior-logo-visual.1024x.jpg" alt="">
+                </div>
+
+                <div class="brand-slider-set">
+                    <img src="../images/chanel (2).jpg" alt="">
+                    <img src="../images/images (2).png" alt="">
+                    <img src="../images/images (1).png" alt="">
+                    <img src="../images/giorgio-armani-logo-brand-clothes-white-design-fashion-symbol-illustration-with-black-background-free-vector.jpg"
+                        alt="">
+                    <img src="../images/circa-april-2014-marbella-spain-260nw-193032692.jpg" alt="">
+                    <img src="../images/dior-logo-visual.1024x.jpg" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
     <section class="improvement">
         <div class="container2">
             <div class="text-box">
@@ -125,59 +197,8 @@
             </div>
         </div>
     </section>
-    <section class="about-section">
-        <div class="about-container">
 
-            <div class="about-text">
-                <span class="label">ABOUT US</span>
-                <h1>CREATED WITH<br>PURPOSE</h1>
 
-                <p>This brand was built from a simple idea — to turn passion into something real.
-                    Through experience,consistency,and attention to detail,it has grown into an
-                    independent business focused on quality and reliability.</p>
-
-                <p>Each product reflects our values: simplicity,care,and continuous improvement.
-                    We believe that honest work and a clear vision are the foundation of long-term success.</p>
-
-                <a href="#" class="read-more">READ MORE</a>
-            </div>
-
-            <div class="about-images">
-                <div class="img img-1"></div>
-                <div class="img img-2"></div>
-                <div class="img img-3"></div>
-            </div>
-
-        </div>
-    </section>
-<section class="brand-slider-only">
-     <h1>Our Brands</h1>
-    <div class="brand-slider-wrapper">
-
-        <div class="brand-slider-track">
-
-            <div class="brand-slider-set">
-                <img src="../images/chanel (2).jpg" alt="">
-                <img src="../images/images (2).png" alt="">
-                <img src="../images/images (1).png" alt="">
-                <img src="../images/giorgio-armani-logo-brand-clothes-white-design-fashion-symbol-illustration-with-black-background-free-vector.jpg" alt="">
-                <img src="../images/circa-april-2014-marbella-spain-260nw-193032692.jpg" alt="">
-                <img src="../images/dior-logo-visual.1024x.jpg" alt="">
-            </div>
-
-            <div class="brand-slider-set">
-                <img src="../images/chanel (2).jpg" alt="">
-                <img src="../images/images (2).png" alt="">
-                <img src="../images/images (1).png" alt="">
-                <img src="../images/giorgio-armani-logo-brand-clothes-white-design-fashion-symbol-illustration-with-black-background-free-vector.jpg" alt="">
-                <img src="../images/circa-april-2014-marbella-spain-260nw-193032692.jpg" alt="">
-                <img src="../images/dior-logo-visual.1024x.jpg" alt="">
-            </div>
-
-        </div>
-
-    </div>
-</section>
 
     <div class="teksti">
         <h1>What Makes us Special</h1>
@@ -485,6 +506,19 @@
             </section>
         </div>
     </div>
+
+    <div id="alert-banner" class="alert-banner"></div>
+
+    <section class="newsletter">
+        <h2>Join our world of fragrance!</h2>
+        <p>Be the first to discover new releases and exclusive offers.</p>
+        <form id="newsletter-form">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+
     <div class="fundi">
         <footer class="footer">
             <div class="container1">
@@ -492,19 +526,19 @@
                     <div class="footer-col">
                         <h4>Locations</h4>
                         <ul>
-                            <li><a href="#">Tirane</a></li>
-                            <li><a href="#">Prishtine</a></li>
-                            <li><a href="#">Fushe Kosove</a></li>
-                            <li><a href="#">Prizren</a></li>
+                            <li><a>Tirane</a></li>
+                            <li><a>Prishtine</a></li>
+                            <li><a>Fushe Kosove</a></li>
+                            <li><a>Prizren</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-col">
                         <h4>Contact Us</h4>
                         <ul>
-                            <li><a href="#">Email: parfum@gmail.com</a></li>
-                            <li><a href="#">Numri: +355 69 253 6666</a></li>
-                            <li><a href="#">Fax: +355 69 253 6666</a></li>
+                            <li><a>Email: parfum@gmail.com</a></li>
+                            <li><a>Numri: +355 69 253 6666</a></li>
+                            <li><a>Fax: +355 69 253 6666</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -513,15 +547,18 @@
                             <li><a href="../html/termsOfService.html">Terms of Service</a></li>
                             <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li>
                             <li><a href="../html/refundPolicy.html">Refund Policy</a></li>
-                            <li><a href="../html/shippingPolicy.html">Shiping Policy</a></li>
+                            <li><a href="../html/shippingPolicy.html">Shipping Policy</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>Follow Us</h4>
                         <div class="social-links">
-                            <a href="https://www.instagram.com/maisondeparfum_tirana/?hl=en"><i class=" fab fa-instagram"></i> </a>
-                            <a href="https://www.facebook.com/mdplibriuniversitar/"><i class="fab fa-facebook-f"></i> </a>
-                            <a href="https://www.tiktok.com/@maisondeparfumtirana"><i class="fa-brands fa-tiktok"></i> </a>
+                            <a href="https://www.instagram.com/maisondeparfum_tirana/?hl=en"><i
+                                    class=" fab fa-instagram"></i> </a>
+                            <a href="https://www.facebook.com/mdplibriuniversitar/"><i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@maisondeparfumtirana"><i class="fa-brands fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

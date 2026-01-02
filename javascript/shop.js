@@ -1,35 +1,35 @@
  const products = [
       // Women 
-      { id: 'w1', name: 'Velour Femme', category: 'women', price: 79.99, img:'../images/image1.jpg' },
-      { id: 'w2', name: 'Elegance Rose', category: 'women', price: 69.99, img: '../images/image2.jpg' },
-      { id: 'w3', name: 'Jasmine Silk', category: 'women', price: 89.99, img: '../images/image3.jpg' },
-      { id: 'w4', name: 'Moonlight', category: 'women', price: 99.99, img: '../images/image4.jpg' },
-      { id: 'w5', name: 'Amber Glow', category: 'women', price: 109.99, img: '../images/image5.jpg' },
-      { id: 'w6', name: 'Peony Whisper', category: 'women', price: 59.99, img: '../images/image6.jpg' },
+      { id: 'w1', name: 'My Way | Armani', category: 'women', price: 79.99, img:'../images/image1.jpg' },
+      { id: 'w2', name: 'African Leather | Memo Paris', category: 'women', price: 69.99, img: '../images/image2.jpg' },
+      { id: 'w3', name: 'Angels Share Anniversary Edition | Kilian', category: 'women', price: 89.99, img: '../images/image3.jpg' },
+      { id: 'w4', name: 'Arabians Tonka | Montale', category: 'women', price: 99.99, img: '../images/image4.jpg' },
+      { id: 'w5', name: 'Jasmin Noir | Bvlgari', category: 'women', price: 109.99, img: '../images/image5.jpg' },
+      { id: 'w6', name: 'Good Girl | Carolina Herrera', category: 'women', price: 59.99, img: '../images/image6.jpg' },
       { id: 'w7', name: 'Ari | Ariana Grande', category: 'women', price: 59.99, img: '../images/image21.jpg' },
-      { id: 'w8', name: 'Baccarat Rouge 540 | Kurkdjian', category: 'women', price: 59.99, img: '../images/image22.jpg' },
+      { id: 'w8', name: 'Gabrielle | Chanel', category: 'women', price: 69.99, img: '../images/image22.jpg' },
 
 
       // Men 
-      { id: 'm1', name: 'Oud Noir', category: 'men', price: 120.00, img: '../images/image7.jpg' },
-      { id: 'm2', name: 'Cedar Blaze', category: 'men', price: 95.00, img: '../images/image8.jpg' },
-      { id: 'm3', name: 'Midnight Leather', category: 'men', price: 110.00, img: '../images/image9.jpg' },
-      { id: 'm4', name: 'Spyre', category: 'men', price: 85.00, img: '../images/image10.jpg' },
-      { id: 'm5', name: 'Tuscan Sun', category: 'men', price: 99.99, img: '../images/image11.jpg' },
-      { id: 'm6', name: 'Ironwood', category: 'men', price: 75.00, img: '../images/image12.jpg' },
-      { id: 'm7', name: 'Valentino', category: 'men', price: 75.00, img: '../images/image23.jpg' },
-      { id: 'm8', name: 'Baccarat Rouge 540 Extrait | Kurkdjian', category: 'men', price: 75.00, img: '../images/image24.jpg' },
+      { id: 'm1', name: 'Dolce Gabana', category: 'men', price: 120.00, img: '../images/image8.jpg' },
+      { id: 'm2', name: 'Ambassador Men | Gisada', category: 'men', price: 95.00, img: '../images/image9.jpg' },
+      { id: 'm3', name: 'Amouage', category: 'men', price: 110.00, img: '../images/image10.jpg' },
+      { id: 'm4', name: 'Sauvage Elixir | Dior', category: 'men', price: 85.00, img: '../images/image13.jpg' },
+      { id: 'm5', name: 'Code Man | Armani', category: 'men', price: 99.99, img: '../images/image11.jpg' },
+      { id: 'm6', name: 'Bleu | Chanel', category: 'men', price: 75.00, img: '../images/image12.jpg' },
+      { id: 'm7', name: 'Baccarat Rouge 540 Extrait | Kurkdjian', category: 'men', price: 75.00, img: '../images/image23.jpg' },
+      { id: 'm8', name: 'Valentino Uomo Born In Roma Intens', category: 'men', price: 95.00, img: '../images/image25.jpg' },
 
 
-      // Unisex 2
-      { id: 'u1', name: 'Citrus Cloud', category: 'unisex', price: 69.00, img: '../images/image14.jpg' },
-      { id: 'u2', name: 'Amber Rain', category: 'unisex', price: 88.00, img: '../images/image15.jpg' },
-      { id: 'u3', name: 'Vanilla Drift', category: 'unisex', price: 78.50, img: '../images/image16.jpg' },
-      { id: 'u4', name: 'Noir Harmony', category: 'unisex', price: 99.00, img: '../images/image17.jpg' },
-      { id: 'u5', name: 'Sage & Salt', category: 'unisex', price: 82.00, img: '../images/image1.jpg' },
-      { id: 'u6', name: 'Rainwood', category: 'unisex', price: 92.00, img: '../images/image19.jpg' },
-      { id: 'u7', name: 'Chanel 1957 | Chanel', category: 'unisex', price: 92.00, img: '../images/image25.jpg' },
-      { id: 'u8', name: 'Red Tobacco | Mancera', category: 'unisex', price: 92.00, img: '../images/image26.jpg' },
+      // Unisex 
+      { id: 'u1', name: 'YSL', category: 'unisex', price: 69.00, img: '../images/image14.jpg' },
+      { id: 'u2', name: 'Oud Satin Mood | Kurkdjian', category: 'unisex', price: 88.00, img: '../images/image15.jpg' },
+      { id: 'u3', name: 'Kirke | Tiziana Terenzi', category: 'unisex', price: 78.50, img: '../images/image16.jpg' },
+      { id: 'u4', name: 'Myrrhe Mystere | Tom Ford', category: 'unisex', price: 99.00, img: '../images/image17.jpg' },
+      { id: 'u5', name: 'Vodka on the Rocks | Kilian', category: 'unisex', price: 82.00, img: '../images/image18.jpg' },
+      { id: 'u6', name: 'More Than Words | Xerjoff', category: 'unisex', price: 92.00, img: '../images/image20.jpg' },
+      { id: 'u7', name: 'Fucking Fabulous | Tom Ford', category: 'unisex', price: 92.00, img: '../images/image26.jpg' },
+      { id: 'u8', name: 'Cherry Smoke | Tom Ford', category: 'unisex', price: 92.00, img: '../images/image27.jpg' },
 
     ];
 
@@ -235,10 +235,12 @@
       
         const orderId = 'ORD' + Math.floor(Math.random()*90000+10000);
 
-        $('#successModal').fadeIn(180);
+        document.getElementById('successModal').style.display = 'flex';
+
         document.getElementById('orderSummary').innerText = `
           Thank you!, ${document.getElementById('cname').value}!
-          Order ${orderId} created. Total: €€{grand.toFixed(2)}.
+          Order ${orderId} created. Total: €${grand.toFixed(2)}.
+
           Large items (line>90€): ${bigLines.map(b=>b.name).join(', ') || 'None'}.
         `;
 
@@ -246,12 +248,20 @@
         cart = []; saveCartToStorage(); renderCart();
         checkoutForm.reset();
         formMsg.innerText = 'Order placed successfully!';
-        payBtn.disabled = false;
+        payBtn.disabled = true;
       }, 1100);
     });
 
    
-    document.getElementById('closeModal').addEventListener('click', ()=> $('#successModal').fadeOut(180));
+    const closeBtn = document.getElementById('closeModal');
+const successModal = document.getElementById('successModal');
+
+if (closeBtn && successModal) {
+  closeBtn.addEventListener('click', () => {
+    successModal.style.display = 'none';
+  });
+}
+
 
     
     checkFormReady();
@@ -272,3 +282,27 @@
     document.getElementById('search').addEventListener('keydown', (e) => {
       if(e.key === 'Enter'){ e.preventDefault(); renderProducts(getFiltered()); }
     });
+
+
+
+
+//Funksioni per butonin "Back to Top"
+$(document).ready(function () {
+    $('body').append('<div id="backToTop">&#8679;</div>');
+
+    var backToTop = $('#backToTop');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            backToTop.fadeIn(300);
+        } else {
+            backToTop.fadeOut(300);
+        }
+    });
+    backToTop.click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+});
+
+

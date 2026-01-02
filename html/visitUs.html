@@ -8,19 +8,42 @@
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  
+
   <link rel="stylesheet" href="../css/visitUs.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
+  <div class="pjesakryesore">
+    <header>
+      <h2 class="logo">Maison De Parfum</h2>
+      <nav class="navigation">
+        <a href="homepage.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="shop.html">Shop</a>
+        <a href="visitUs.html">Our store</a>
+        <div class="dropdown__item">
+          <div class="nav__link">
+            Register <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+          </div>
+          <ul class="dropdown__menu">
+            <li><a href="login.html" class="dropdown__link">Log In</a></li>
+            <li><a href="signup.html" class="dropdown__link">Sign Up</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
 
   <div class="container">
 
-    <header>
+    <div class="header1">
       <h1>Maison de Parfum</h1>
       <p class="lead">A luxury experience.</p>
       <div class="divider"></div>
-    </header>
+    </div>
 
     <main class="grid">
       <section class="card">
@@ -50,7 +73,7 @@
               <span class="close" onclick="closeBooking()">&times;</span>
 
               <h2>Book an Appointment</h2>
-              <p class="modal-subtitle">Maison de Parfum — personalized experience</p>
+              <p class="modal-subtitle">Maison de Parfum - personalized experience</p>
 
               <form onsubmit="submitBooking(event)">
                 <label>Full Name</label>
@@ -71,10 +94,27 @@
               </form>
             </div>
           </div>
+          <!-- Success Modal -->
+          <div id="successModal" class="modal">
+            <div class="modal-content success">
+              <span class="close" onclick="closeSuccess()">&times;</span>
+
+              <h2>Success</h2>
+              <p class="modal-subtitle">
+                The reservation was successfully submitted! <br>
+                We will contact you soon.
+              </p>
+
+              <button class="btn primary full" onclick="closeSuccess()">
+                OK
+              </button>
+            </div>
+          </div>
+
 
           <a class="btn secondary" href="https://www.google.com/maps/dir/?api=1&destination=Tirana+East+Gate+TEG"
             target="_blank" rel="noopener">
-            Navigate 
+            Navigate
           </a>
         </div>
 
@@ -84,10 +124,56 @@
     </main>
 
   </div>
+  <div class="fundi">
+    <footer class="footer">
+      <div class="container1">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Locations</h4>
+            <ul>
+              <li><a>Tirane</a></li>
+              <li><a>Prishtine</a></li>
+              <li><a>Fushe Kosove</a></li>
+              <li><a>Prizren</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul>
+              <li><a>Email: parfum@gmail.com</a></li>
+              <li><a>Numri: +355 69 253 6666</a></li>
+              <li><a>Fax: +355 69 253 6666</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="../html/termsOfService.html">Terms of Service</a></li>
+              <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li>
+              <li><a href="../html/refundPolicy.html">Refund Policy</a></li>
+              <li><a href="../html/shippingPolicy.html">Shipping Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="https://www.instagram.com/maisondeparfum_tirana/?hl=en"><i class=" fab fa-instagram"></i> </a>
+              <a href="https://www.facebook.com/mdplibriuniversitar/"><i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.tiktok.com/@maisondeparfumtirana"><i class="fa-brands fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>&copy; 2025, Maison De Parfum</h3>
+    </footer>
+  </div>
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  
+
   <script src="../javascript/visitUs.js"></script>
 
 </body>

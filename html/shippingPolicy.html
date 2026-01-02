@@ -5,10 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/shippingPolicy.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Shipping Policy</title>
 </head>
 
 <body>
+    <div class="pjesakryesore">
+        <header>
+            <h2 class="logo">Maison De Parfum</h2>
+            <nav class="navigation">
+                <a href="homepage.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="visitUs.html">Our store</a>
+                <div class="dropdown__item">
+                    <div class="nav__link">
+                        Register <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li><a href="login.html" class="dropdown__link">Log In</a></li>
+                        <li><a href="signup.html" class="dropdown__link">Sign Up</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
     <section class="shipping">
         <h1>Shipping Policy</h1>
         <div class="subtitle">Shipping Terms</div>
@@ -65,7 +88,8 @@
         <h3>9. Incorrect Address</h3>
         <p>
             Customers are responsible for providing accurate and complete shipping information.
-            We are not responsible for delivery issues resulting from incorrect or incomplete addresses provided at checkout.
+            We are not responsible for delivery issues resulting from incorrect or incomplete addresses provided at
+            checkout.
         </p>
 
         <h3>10. Contact</h3>
@@ -75,6 +99,91 @@
             Our support team will assist you promptly.
         </p>
     </section>
+
+    <div class="fundi">
+        <footer class="footer">
+            <div class="container1">
+                <div class="row">
+                     <div class="footer-col">
+                        <h4>Locations</h4>
+                        <ul>
+                            <li><a>Tirane</a></li>
+                            <li><a>Prishtine</a></li>
+                            <li><a>Fushe Kosove</a></li>
+                            <li><a>Prizren</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><a>Email: parfum@gmail.com</a></li>
+                            <li><a>Numri: +355 69 253 6666</a></li>
+                            <li><a>Fax: +355 69 253 6666</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="../html/termsOfService.html">Terms of Service</a></li>
+                            <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li>
+                            <li><a href="../html/refundPolicy.html">Refund Policy</a></li>
+                            <li><a href="../html/shippingPolicy.html">Shipping Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/maisondeparfum_tirana/?hl=en"><i
+                                    class=" fab fa-instagram"></i> </a>
+                            <a href="https://www.facebook.com/mdplibriuniversitar/"><i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@maisondeparfumtirana"><i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3>&copy; 2025, Maison De Parfum</h3>
+        </footer>
+    </div>
+    <script>
+        //Funksionni per rregullim te scroll te headerit
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            var navbar = $('header');
+            $(window).scroll(function () {
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop) {
+                    navbar.slideUp(200);
+                } else {
+                    navbar.slideDown(200);
+                }
+                lastScrollTop = st;
+            });
+        });
+
+        //Funksioni per butonin "Back to Top"
+        $(document).ready(function () {
+            $('body').append('<div id="backToTop">&#8679;</div>');
+
+            var backToTop = $('#backToTop');
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    backToTop.fadeIn(300);
+                } else {
+                    backToTop.fadeOut(300);
+                }
+            });
+            backToTop.click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
