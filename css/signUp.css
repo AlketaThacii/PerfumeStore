@@ -111,7 +111,6 @@ header{
 }
 .dropdown__menu a:hover{
     background-color: #333;
-     text-decoration: underline;
 }
 .dropdown__item:hover .dropdown__menu{
     display: block;
@@ -322,21 +321,142 @@ ul{
     color: #24262b;
     background-color: #ffffff;
 }
-/*Pjesa per butonin "Back to Top"*/
-#backToTop {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;  
-    display: none; 
-    background-color: black;
-    color: #d4af37;
-    padding: 12px 16px;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 9999;
-    font-size: 16px;
-    transition: opacity 0.3s ease;
+/*responsiviteti*/
+/* Tablet  ≤ 992px */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .navigation a {
+    font-size: 14px;
+  }
+
+  .wrapper {
+    max-width: 420px;
+    padding: 35px;
+  }
 }
-#backToTop:hover {
-    background-color: #555;
+
+/* Tablet / telefon ≤ 768px */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  #menu-toggle:checked + .hamburger + .navigation {
+    display: flex;
+  }
+
+  .dropdown__menu {
+    position: static;
+    display: none;
+  }
+
+  .dropdown__item:focus-within .dropdown__menu {
+    display: flex;
+  }
+
+  .navigation a {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  header {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .input-box {
+    margin-bottom: 18px;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* telefon te vogel ≤ 480px */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .form-box h2 {
+    font-size: 20px;
+  }
+
+  .input-box input {
+    font-size: 14px;
+    padding: 10px 36px 10px 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .switch a {
+    font-size: 13px;
+  }
+
+  /* Footer */
+  .row {
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    max-width: 100%;
+  }
+
+  .footer-col h4 {
+    font-size: 16px;
+  }
+
+  .footer-col h4::before {
+    width: 60px;
+  }
+
+  .footer-col ul li a {
+    font-size: 14px;
+  }
+
+  .social-links a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  .footer h3 {
+    font-size: 12px;
+    padding-top: 20px;
+  }
 }
