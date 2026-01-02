@@ -82,3 +82,21 @@ $(document).ready(function () {
         lastScrollTop = st;
     });
 });
+//Funksioni per butonin "Back to Top"
+$(document).ready(function () {
+    $('body').append('<div id="backToTop">&#8679;</div>');
+
+    var backToTop = $('#backToTop');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            backToTop.fadeIn(300);
+        } else {
+            backToTop.fadeOut(300);
+        }
+    });
+    backToTop.click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+});

@@ -10,7 +10,8 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
     </div>
     <div class="kryesore">
         <div class="wrapper active">
-            
+
 
             <div class="form-box register">
                 <h2>SignUp</h2>
@@ -78,15 +79,15 @@
                         <label>Password</label>
                     </div>
 
-                <button type="submit" class="btn">SignUp</button>
-               <p class="switch">
-                 <a href="./login.html" >
-               Already have an account? Login
-       </a>
-       </p>
-            </form>
+                    <button type="submit" class="btn">SignUp</button>
+                    <p class="switch">
+                        <a href="./login.html">
+                            Already have an account? Login
+                        </a>
+                    </p>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
     <div class="fundi">
         <footer class="footer">
@@ -135,6 +136,40 @@
             <h3>&copy; 2025, Maison De Parfum</h3>
         </footer>
     </div>
+    <script>
+        //Funksionni per rregullim te scroll te headerit
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            var navbar = $('header');
+            $(window).scroll(function () {
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop) {
+                    navbar.slideUp(200);
+                } else {
+                    navbar.slideDown(200);
+                }
+                lastScrollTop = st;
+            });
+        });
+        //Funksioni per butonin "Back to Top"
+        $(document).ready(function () {
+            $('body').append('<div id="backToTop">&#8679;</div>');
+
+            var backToTop = $('#backToTop');
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    backToTop.fadeIn(300);
+                } else {
+                    backToTop.fadeOut(300);
+                }
+            });
+            backToTop.click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
+    </script>
     <script src="../javascript/register.js"></script>
 </body>
 
