@@ -25,7 +25,7 @@ function closeBooking() {
 function submitBooking(e) {
   e.preventDefault();
   closeBooking();
-  alert("Rezervimi u dërgua me sukses! Do t'ju kontaktojmë së shpejti.");
+  alert("The reservation was successfully submitted! We will contact you soon.");
 }
 
 window.addEventListener('click', function (e) {
