@@ -226,18 +226,14 @@ margin-top: 120px;
 .switch{
     text-align:center;
     margin-top:20px;
+    color: gold;
 }
-.login-link {
-  color: gold;          
-  font-weight: 500;
-  text-decoration: none;
-   font-size: .9em;
-    margin: -15px 0 15px;
-
+.switch a {
+    color:gold; 
+    text-decoration: none; 
 }
-
-.login-link:hover {
-  text-decoration: underline;
+.switch a:hover {
+   text-decoration: underline;
 }
 
 /*Pjesa e footerit*/
