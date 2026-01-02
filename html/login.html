@@ -11,14 +11,17 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/login.css">
-     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="pjesakryesore">
         <header>
             <h2 class="logo">Maison De Parfum</h2>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
             <nav class="navigation">
                 <a href="homepage.html">Home</a>
                 <a href="aboutus.html">About Us</a>
@@ -38,16 +41,16 @@
     </div>
     <div class="kryesore">
         <div class="wrapper">
-            
+
             <div class="form-box login">
                 <h2>Login</h2>
-      <form action="#">
-         <div class="input-box">
-              <span class="icon"><ion-icon name="mail"></ion-icon></span>
-              <input type="email" required>
-              <label>Email</label>
-          </div>
-                  
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+
 
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
@@ -59,11 +62,11 @@
                         <label>
                             <input type="checkbox"> Remember me
                         </label>
-                <a href="./forgot-password.html">Forgot Password?</a>
+                        <a href="./forgot-password.html">Forgot Password?</a>
                     </div>
 
                     <button type="submit" class="btn" formaction="./homepage.html" formmethod="get">
-                        Login</button> 
+                        Login</button>
                     <p class="switch">
                         <a href="./signup.html">
                             Don’t have an account? Sign Up
@@ -80,7 +83,7 @@
         <footer class="footer">
             <div class="container1">
                 <div class="row">
-                     <div class="footer-col">
+                    <div class="footer-col">
                         <h4>Locations</h4>
                         <ul>
                             <li><a>Tirane</a></li>
@@ -123,6 +126,40 @@
             <h3>&copy; 2025, Maison De Parfum</h3>
         </footer>
     </div>
+    <script>
+        //Funksionni per rregullim te scroll te headerit
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            var navbar = $('header');
+            $(window).scroll(function () {
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop) {
+                    navbar.slideUp(200);
+                } else {
+                    navbar.slideDown(200);
+                }
+                lastScrollTop = st;
+            });
+        });
+        //Funksioni per butonin "Back to Top"
+        $(document).ready(function () {
+            $('body').append('<div id="backToTop">&#8679;</div>');
+
+            var backToTop = $('#backToTop');
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    backToTop.fadeIn(300);
+                } else {
+                    backToTop.fadeOut(300);
+                }
+            });
+            backToTop.click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
+    </script>
     <script src="../javascript/register.js"></script>
 </body>
 

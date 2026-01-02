@@ -22,21 +22,36 @@ $(document).ready(function () {
 
 //Pjesa per me bo swip ne pjesen "What our Clients Say"
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 3,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+  loop: false,
+  spaceBetween: 30,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
     },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+    480: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
     },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+    },
+    1024: {
+      slidesPerView: 3,
+      slidesPerGroup: 3, 
+    }
+  }
 });
-
 
 
 //Pjesa e shfaqjes se alertit kur bejm subscribe

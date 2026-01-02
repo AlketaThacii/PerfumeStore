@@ -600,6 +600,7 @@
   .dropdown__item:focus-within .dropdown__menu {
     display: flex;
   }
+  
 }
 @media (max-width: 980px) {
   .layout {
@@ -626,19 +627,38 @@
   }
 }
 @media (max-width: 768px) {
-  .footer .row {
-      /* Në telefon standard:
-     - shfaqen 2 parfume në rresht
-     */
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
+
+    .container1 {
+        background-color: black;
+    }
+
+    .footer h3 {
+        background-color: #000;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col h4::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer h3 {
+        padding-top: 50px;
+    }
 
   .footer-col {
     max-width: 100%;
   }
 }
+
 /* Siguron që body dhe html mbushin gjithmonë ekranin */
 html, body {
   height: 100%;
