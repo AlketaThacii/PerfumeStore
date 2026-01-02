@@ -88,3 +88,22 @@ $(document).ready(function () {
     });
 
 });
+
+
+$(document).ready(function () {
+    var lastScrollTop = 0; // Ruaj scroll-in e mëparshëm
+    var navbar = $('header'); // Zgjidh header-in
+
+    $(window).scroll(function () {
+        var st = $(this).scrollTop(); // Marr scroll-in aktual
+
+        if (st > lastScrollTop) {
+            // Scroll poshtë
+            navbar.slideUp(200); // fsheh header-in
+        } else {
+            // Scroll lart
+            navbar.slideDown(200); 
+        }
+        lastScrollTop = st; 
+    });
+});
