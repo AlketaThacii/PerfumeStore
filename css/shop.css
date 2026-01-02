@@ -653,12 +653,12 @@
     .footer h3 {
         padding-top: 50px;
     }
-  }
 
   .footer-col {
     max-width: 100%;
   }
 }
+
 /* Siguron që body dhe html mbushin gjithmonë ekranin */
 html, body {
   height: 100%;
