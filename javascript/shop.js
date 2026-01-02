@@ -286,7 +286,26 @@ document.getElementById('search').addEventListener('keydown', (e) => {
 });
 
 
-
+//Funksionni per rregullim te scroll te headerit
+$(function () {
+  let lastScrollTop = 0;
+  const nav = $('.nav-container');
+  $(window).on('scroll', function () {
+    let st = $(this).scrollTop();
+    if (st > lastScrollTop && st > 120) {
+      nav.css({
+        transform: 'translateY(-100%)',
+        transition: 'transform 0.3s ease'
+      });
+    } else {
+      nav.css({
+        transform: 'translateY(0)',
+        transition: 'transform 0.3s ease'
+      });
+    }
+    lastScrollTop = st;
+  });
+});
 
 //Funksioni per butonin "Back to Top"
 $(document).ready(function () {
