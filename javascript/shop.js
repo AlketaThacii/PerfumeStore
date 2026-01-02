@@ -235,10 +235,12 @@
       
         const orderId = 'ORD' + Math.floor(Math.random()*90000+10000);
 
-        $('#successModal').fadeIn(180);
+        document.getElementById('successModal').style.display = 'flex';
+
         document.getElementById('orderSummary').innerText = `
           Thank you!, ${document.getElementById('cname').value}!
-          Order ${orderId} created. Total: €€{grand.toFixed(2)}.
+          Order ${orderId} created. Total: €${grand.toFixed(2)}.
+
           Large items (line>90€): ${bigLines.map(b=>b.name).join(', ') || 'None'}.
         `;
 
@@ -246,12 +248,20 @@
         cart = []; saveCartToStorage(); renderCart();
         checkoutForm.reset();
         formMsg.innerText = 'Order placed successfully!';
-        payBtn.disabled = false;
+        payBtn.disabled = true;
       }, 1100);
     });
 
    
-    document.getElementById('closeModal').addEventListener('click', ()=> $('#successModal').fadeOut(180));
+    const closeBtn = document.getElementById('closeModal');
+const successModal = document.getElementById('successModal');
+
+if (closeBtn && successModal) {
+  closeBtn.addEventListener('click', () => {
+    successModal.style.display = 'none';
+  });
+}
+
 
     
     checkFormReady();
