@@ -282,3 +282,25 @@ if (closeBtn && successModal) {
     document.getElementById('search').addEventListener('keydown', (e) => {
       if(e.key === 'Enter'){ e.preventDefault(); renderProducts(getFiltered()); }
     });
+
+
+
+
+//Funksioni per butonin "Back to Top"
+$(document).ready(function () {
+    $('body').append('<div id="backToTop">&#8679;</div>');
+
+    var backToTop = $('#backToTop');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            backToTop.fadeIn(300);
+        } else {
+            backToTop.fadeOut(300);
+        }
+    });
+    backToTop.click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 500);
+        return false;
+    });
+});
