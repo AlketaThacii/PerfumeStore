@@ -127,6 +127,72 @@ header{
 }
 
 
+/* Pjesa e njoftimit per cookies */
+#cookie-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    display: none;
+    z-index: 999;
+}
+#cookie-modal {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 420px;
+    background: black;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    display: none;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+}
+#cookie-modal h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+}
+#cookie-modal p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #aaa7a7;
+    margin-bottom: 20px;
+}
+#cookie-modal a {
+    color: #d4af37;
+    text-decoration: none;
+}
+#cookie-accept {
+    width: 100%;
+    padding: 12px;
+    background-color: black;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #0d0d0d;
+    transition: all 0.3s ease;
+    color: white;
+    border: 1px solid #ccc;
+}
+#cookie-accept:hover{
+    background: #b8962e;
+    color: #000;
+}
+#cookie-preferences {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #ccc;
+    color: white;
+    cursor: pointer;
+}
+
+
 /*Pjesa e videos*/
 .hero-video-section {
     position: relative;

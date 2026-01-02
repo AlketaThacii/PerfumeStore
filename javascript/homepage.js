@@ -70,3 +70,21 @@ function showAlert(message, color){
     }, 3000);
 }
 
+$(document).ready(function () {
+
+    setTimeout(function () {
+        if (!sessionStorage.getItem("cookieShown")) {
+            $("#cookie-overlay, #cookie-modal").fadeIn();
+            sessionStorage.setItem("cookieShown", "true");
+        }
+    }, 3000); 
+
+    $("#cookie-accept").click(function () {
+        $("#cookie-overlay, #cookie-modal").fadeOut();
+    });
+
+    $("#cookie-overlay").click(function () {
+        $("#cookie-overlay, #cookie-modal").fadeOut();
+    });
+
+});
