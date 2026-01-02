@@ -6,6 +6,9 @@
       { id: 'w4', name: 'Arabians Tonka | Montale', category: 'women', price: 99.99, img: '../images/image4.jpg' },
       { id: 'w5', name: 'Jasmin Noir | Bvlgari', category: 'women', price: 109.99, img: '../images/image5.jpg' },
       { id: 'w6', name: 'Good Girl | Carolina Herrera', category: 'women', price: 59.99, img: '../images/image6.jpg' },
+      { id: 'w7', name: 'Ari | Ariana Grande', category: 'women', price: 59.99, img: '../images/image21.jpg' },
+      { id: 'w8', name: 'Gabrielle | Chanel', category: 'women', price: 69.99, img: '../images/image22.jpg' },
+
 
       // Men 
       { id: 'm1', name: 'Dolce Gabana', category: 'men', price: 120.00, img: '../images/image8.jpg' },
@@ -14,6 +17,9 @@
       { id: 'm4', name: 'Sauvage Elixir | Dior', category: 'men', price: 85.00, img: '../images/image13.jpg' },
       { id: 'm5', name: 'Code Man | Armani', category: 'men', price: 99.99, img: '../images/image11.jpg' },
       { id: 'm6', name: 'Bleu | Chanel', category: 'men', price: 75.00, img: '../images/image12.jpg' },
+      { id: 'm7', name: 'Baccarat Rouge 540 Extrait | Kurkdjian', category: 'men', price: 75.00, img: '../images/image23.jpg' },
+      { id: 'm8', name: 'Valentino Uomo Born In Roma Intens', category: 'men', price: 95.00, img: '../images/image25.jpg' },
+
 
       // Unisex 
       { id: 'u1', name: 'YSL', category: 'unisex', price: 69.00, img: '../images/image14.jpg' },
@@ -22,6 +28,9 @@
       { id: 'u4', name: 'Myrrhe Mystere | Tom Ford', category: 'unisex', price: 99.00, img: '../images/image17.jpg' },
       { id: 'u5', name: 'Vodka on the Rocks | Kilian', category: 'unisex', price: 82.00, img: '../images/image18.jpg' },
       { id: 'u6', name: 'More Than Words | Xerjoff', category: 'unisex', price: 92.00, img: '../images/image20.jpg' },
+      { id: 'u7', name: 'Fucking Fabulous | Tom Ford', category: 'unisex', price: 92.00, img: '../images/image26.jpg' },
+      { id: 'u8', name: 'Cherry Smoke | Tom Ford', category: 'unisex', price: 92.00, img: '../images/image27.jpg' },
+
     ];
 
    
