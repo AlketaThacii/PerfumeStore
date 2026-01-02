@@ -32,7 +32,7 @@
       { id: 'u8', name: 'Cherry Smoke | Tom Ford', category: 'unisex', price: 92.00, img: '../images/image27.jpg' },
 
     ];
-
+/* RENDERS PRODUCTS */
    
     const productsNode = document.getElementById('products');
     function renderProducts(list){
@@ -51,7 +51,7 @@
         productsNode.appendChild(div);
       });
     }
-
+/* FILTERING PRODUCTS */
     
     const categorySelect = document.getElementById('category');
     const searchInput = document.getElementById('search');
@@ -71,7 +71,7 @@
       categorySelect.value = 'all'; searchInput.value = '';
       renderProducts(products);
     });
-
+/*  CART FUNCTIONALITY */
     
     let cart = []; 
 
@@ -95,7 +95,7 @@
       cart = cart.map(it => it.id === id ? {...it, qty: Number(qty)} : it).filter(it => it.qty > 0);
       saveCartToStorage(); renderCart();
     }
-
+/* REMOVE FROM CART */
   
     function removeFromCart(id){
       cart = cart.filter(it => it.id !== id);
@@ -114,7 +114,7 @@
       const grand = subtotal + shipping;
       return { items, subtotal, shipping, grand };
     }
-
+/* RENDER CART */
     
     function renderCart(){
       const listNode = document.getElementById('cartList');
@@ -148,7 +148,7 @@
         `;
         listNode.appendChild(node);
       });
-
+/* UPDATE TOTALS */
       
       document.getElementById('subtotal').innerText = `$${subtotal.toFixed(2)}`;
       document.getElementById('shipping').innerText = `$${shipping.toFixed(2)}`;
@@ -170,7 +170,7 @@
         const id = e.target.dataset.id; const val = Number(e.target.value) || 1; updateQty(id, val);
       });
     }
-
+/* ADD TO CART BUTTONS */
     
     productsNode.addEventListener('click', (e)=>{
       if(e.target.matches('.add-btn')){
@@ -178,6 +178,7 @@
         addToCart(id);
       }
     });
+/* CHECKOUT FORM */
 
     
     loadCartFromStorage();
@@ -195,7 +196,7 @@
       payBtn.disabled = !(validHtml && cartOk);
     }
 
-    
+    /* CHECK FORM INPUTS */
     checkoutForm.addEventListener('input', checkFormReady);
     window.addEventListener('storage', () => { loadCartFromStorage(); renderCart(); checkFormReady(); });
 
@@ -212,13 +213,13 @@
         return;
       }
 
-      
+      /*  PROCESS ORDER */
       const orderItems = cart.map(ci => {
         const p = findProductById(ci.id);
         return { id: p.id, name: p.name, unit: p.price, qty: ci.qty, line: (p.price * ci.qty) };
       });
 
-
+/* IDENTIFY BIG LINES */
       const bigLines = orderItems.filter(it => it.line > 90);
 
      
@@ -230,7 +231,7 @@
       formMsg.style.color = '#cfc6b8';
       formMsg.innerText = 'We are processing your order...';
       payBtn.disabled = true;
-
+/* SIMULATE PROCESSING DELAY */
       setTimeout(() => {
       
         const orderId = 'ORD' + Math.floor(Math.random()*90000+10000);
@@ -251,6 +252,7 @@
         payBtn.disabled = true;
       }, 1100);
     });
+/* CLOSE MODAL */
 
    
     const closeBtn = document.getElementById('closeModal');
@@ -261,7 +263,7 @@ if (closeBtn && successModal) {
     successModal.style.display = 'none';
   });
 }
-
+/* INITIAL CHECK FORM */
 
     
     checkFormReady();
@@ -304,3 +306,5 @@ $(document).ready(function () {
         return false;
     });
 });
+
+
