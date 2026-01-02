@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/shippingPolicy.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Shipping Policy</title>
 </head>
 
@@ -87,7 +88,8 @@
         <h3>9. Incorrect Address</h3>
         <p>
             Customers are responsible for providing accurate and complete shipping information.
-            We are not responsible for delivery issues resulting from incorrect or incomplete addresses provided at checkout.
+            We are not responsible for delivery issues resulting from incorrect or incomplete addresses provided at
+            checkout.
         </p>
 
         <h3>10. Contact</h3>
@@ -126,7 +128,7 @@
                             <li><a href="../html/termsOfService.html">Terms of Service</a></li>
                             <li><a href="../html/privacyPolicy.html">Privacy Policy</a></li>
                             <li><a href="../html/refundPolicy.html">Refund Policy</a></li>
-                            <li><a href="../html/shippingPolicy.html">Shiping Policy</a></li>
+                            <li><a href="../html/shippingPolicy.html">Shipping Policy</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -145,6 +147,43 @@
             <h3>&copy; 2025, Maison De Parfum</h3>
         </footer>
     </div>
+    <script>
+        //Funksionni per rregullim te scroll te headerit
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            var navbar = $('header');
+            $(window).scroll(function () {
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop) {
+                    navbar.slideUp(200);
+                } else {
+                    navbar.slideDown(200);
+                }
+                lastScrollTop = st;
+            });
+        });
+
+        //Funksioni per butonin "Back to Top"
+        $(document).ready(function () {
+            $('body').append('<div id="backToTop">&#8679;</div>');
+
+            var backToTop = $('#backToTop');
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 300) {
+                    backToTop.fadeIn(300);
+                } else {
+                    backToTop.fadeOut(300);
+                }
+            });
+            backToTop.click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
