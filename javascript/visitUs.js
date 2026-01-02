@@ -25,15 +25,48 @@ function closeBooking() {
 function submitBooking(e) {
   e.preventDefault();
   closeBooking();
-  alert("Rezervimi u dërgua me sukses! Do t'ju kontaktojmë së shpejti.");
+  
 }
 
+/* Popup i suksesit */
+
+function openBooking() {
+  document.getElementById('bookingModal').style.display = 'flex';
+}
+
+function closeBooking() {
+  document.getElementById('bookingModal').style.display = 'none';
+}
+
+function submitBooking(e) {
+  e.preventDefault();
+  closeBooking();
+  openSuccess();
+}
+
+function openSuccess() {
+  const modal = document.getElementById('successModal');
+  modal.style.display = 'flex';
+}
+
+function closeSuccess() {
+  document.getElementById('successModal').style.display = 'none';
+}
+
+/* Mbyllja modal-et kur klikohet jashtë tyre */
 window.addEventListener('click', function (e) {
-  const modal = document.getElementById('bookingModal');
-  if (e.target === modal) {
+  const bookingModal = document.getElementById('bookingModal');
+  const successModal = document.getElementById('successModal');
+
+  if (e.target === bookingModal) {
     closeBooking();
   }
+
+  if (e.target === successModal) {
+    closeSuccess();
+  }
 });
+
 
 //Funksionni per rregullim te scroll te headerit
 $(document).ready(function () {
