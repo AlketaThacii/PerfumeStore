@@ -124,7 +124,6 @@ header {
 
 .dropdown__menu a:hover {
   background-color: #333;
-  text-decoration: underline;
 }
 
 .dropdown__item:hover .dropdown__menu {
@@ -139,7 +138,9 @@ header {
 .dropdown__item:hover .dropdown__arrow {
   transform: rotate(180deg);
 }
-
+.navigation li{
+  list-style: none;
+}
 /* ------------Pjesa kryesore----------*/
 .container {
   max-width: 1000px;
