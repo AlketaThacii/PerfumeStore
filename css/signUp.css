@@ -111,7 +111,6 @@ header{
 }
 .dropdown__menu a:hover{
     background-color: #333;
-     text-decoration: underline;
 }
 .dropdown__item:hover .dropdown__menu{
     display: block;
