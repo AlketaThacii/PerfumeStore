@@ -58,6 +58,7 @@ header{
     color: white;
     text-decoration: none;
     font-weight: 500;
+    transition: transform 0.3s ease;
 }
 .navigation a:after{
     content: '';
@@ -66,14 +67,17 @@ header{
     bottom: -6px;
     width: 100%;
     height: 3px;
-    background: #fff;
+    background: #d4af37;
     border-radius: 5px;
     transform: scaleX(0);
-    transition: transform .5s;
+    transition: transform 0.5s ease;
 }
-.navigation a:hover ::after{
-    transform-origin:left ;
+.navigation a:hover::after {
+    transform-origin: center;
     transform: scaleX(1);
+}
+.navigation a:hover {
+    transform: scale(1.1);
 }
 .dropdown__item{
     position: relative;   
